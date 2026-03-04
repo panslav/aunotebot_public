@@ -23,8 +23,12 @@ This guide explains how to use AUNotes bot from Telegram.
    - command menu (Telegram burger menu) with shortcuts
 
 Public Terms documents:
-- `https://github.com/panslav/aunotebot_public/tree/main/docs`
+- `https://github.com/panslav/aunotebot_public/tree/main/docs/legal`
 - Open `More -> Legal` to open the Terms page for your current UI language.
+
+Public User Manuals:
+- `https://github.com/panslav/aunotebot_public/tree/main/docs/manuals`
+- Open `More -> Help` to open the manual page for your current UI language.
 
 ## 2. Language
 1. On first `/start`, bot tries to detect your language from Telegram locale.
