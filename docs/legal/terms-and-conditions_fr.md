@@ -1,13 +1,11 @@
-# Conditions générales (bot AUNotes)
-
-Autres langues : cliquez sur un bouton drapeau ci-dessous.
+# Conditions générales (AUNotebot)
 
 ---
 
 Dernière mise à jour : 6 mars 2026
 
 ## 1. Parties et Définitions
-1.1. Les présentes Conditions régissent l'utilisation du bot AUNotes (le « Service »).  
+1.1. Les présentes Conditions régissent l'utilisation du AUNotebot (le « Service »).  
 1.2. Le Service est exploité par un propriétaire privé situé en Espagne (le « Propriétaire »).  
 1.3. « Utilisateur » désigne toute personne qui accède au Service ou l'utilise.  
 1.4. « Contenu » inclut tout texte, média, lien, métadonnée, tag, résumé ou sortie traitée par le Service.
@@ -16,6 +14,12 @@ Dernière mise à jour : 6 mars 2026
 2.1. En appuyant sur **Accepter**, vous confirmez avoir lu et accepté les présentes Conditions.  
 2.2. Si vous n'acceptez pas ces Conditions, vous ne devez pas utiliser le Service.  
 2.3. Vous déclarez avoir la capacité juridique d'accepter ces Conditions et d'utiliser le Service.
+
+## 3. Portée du Service
+3.1. Le Service aide à créer et gérer des notes/tâches dans Telegram.  
+3.2. Le Service peut utiliser des fonctions IA, notamment transcription, OCR, résumé, tagging, traduction et réponses de type recall.  
+3.3. Les fonctionnalités sont fournies à la discrétion du Propriétaire et peuvent varier selon l'utilisateur, la langue, la région, le comportement de la plateforme ou la disponibilité technique.
+3.4. Le Service utilise l'IA pour générer ou transformer des parties du contenu (notamment résumés, tags, transcriptions, traductions et sortie vocale).
 
 ## 4. Contenu Utilisateur et Droits
 4.1. Vous restez responsable de tout Contenu soumis.  
@@ -31,16 +35,21 @@ Dernière mise à jour : 6 mars 2026
 - diffuser malware, spam, phishing ou fraude ;
 - tenter un accès non autorisé ou perturber l'intégrité du Service ;
 - publier du contenu illicite, diffamatoire ou portant atteinte aux droits.
+
 5.3. Le Propriétaire peut enquêter sur les abus et coopérer avec les autorités compétentes dans le cadre de la loi.
+
 5.4. Pour toute fonctionnalité reposant sur OpenAI, l'utilisation doit respecter les Politiques d'utilisation d'OpenAI (en vigueur depuis le 29 octobre 2025, et leurs mises à jour): https://openai.com/en-GB/policies/usage-policies/.  
+
 5.5. Sans limitation, vous ne devez pas utiliser le Service pour des catégories interdites par OpenAI, notamment les atteintes aux personnes, les abus de vie privée, l'exploitation ou la mise en danger de mineurs, la manipulation ou la tromperie (y compris fraude/usurpation), les décisions automatisées à haut risque sans contrôle humain, ou les tentatives de contournement des garde-fous.
 
 ## 6. IA et Services Tiers
 6.1. Le Service peut dépendre de fournisseurs tiers (y compris Telegram et des fournisseurs IA).  
 6.2. Le Propriétaire n'est pas responsable des pannes, échecs d'API, restrictions de politique, limitations de débit, comportement des modèles, décisions de modération ou traitement des données par des tiers.  
 6.3. Les sorties IA peuvent être inexactes ou incomplètes et doivent être vérifiées de manière indépendante par l'Utilisateur.
+
 6.4. Pour respecter les politiques des fournisseurs tiers (y compris OpenAI), le Propriétaire peut surveiller les activités signalées et appliquer des actions de modération, y compris avertissements, restrictions de fonctionnalités, blocage de contenu ou suspension d'accès.  
 6.5. Si les exigences des politiques tierces évoluent, le Propriétaire peut immédiatement désactiver, limiter ou modifier les fonctionnalités concernées.
+
 6.6. Étant donné que le Service fonctionne sur Telegram, l'utilisation est également soumise aux Conditions Telegram (UE) et à la Politique de confidentialité Telegram (UE), telles que mises à jour :
 - https://telegram.org/tos/eu
 - https://telegram.org/privacy/eu
@@ -92,11 +101,5 @@ Dernière mise à jour : 6 mars 2026
 
 ## 14. Contact et Notifications
 14.1. Opérateur du Service : propriétaire privé situé en Espagne.  
-14.2. Support/retour (Telegram) : `@aunotebot_support`.
+14.2. Support/retour (Telegram) : https://t.me/aunotebot_support.
 14.3. Le Propriétaire peut modifier ces Conditions à tout moment. La poursuite de l'utilisation du Service après modification vaut acceptation des Conditions mises à jour.
-
-## 3. Portée du Service
-3.1. Le Service aide à créer et gérer des notes/tâches dans Telegram.  
-3.2. Le Service peut utiliser des fonctions IA, notamment transcription, OCR, résumé, tagging, traduction et réponses de type recall.  
-3.3. Les fonctionnalités sont fournies à la discrétion du Propriétaire et peuvent varier selon l'utilisateur, la langue, la région, le comportement de la plateforme ou la disponibilité technique.
-3.4. Le Service utilise l'IA pour générer ou transformer des parties du contenu (notamment résumés, tags, transcriptions, traductions et sortie vocale).

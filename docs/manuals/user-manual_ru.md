@@ -1,4 +1,4 @@
-# Руководство пользователя AUNotes
+# Руководство пользователя AUNotebot
 
 ## 1. Старт
 1. Откройте чат с ботом.
@@ -61,4 +61,9 @@
 - `More -> Legal` открывает Terms & Conditions на текущем языке интерфейса.
 
 ## 12. Обратная связь
-- Идеи и вопросы: `@evictorov`
+- Идеи и вопросы: `@aunotebot_support`
+
+## Связанные документы
+- Terms & Conditions: [Legal docs repository](https://github.com/panslav/aunotebot_public/tree/main/docs/legal)
+- Screenflow: [Screenflow](https://github.com/panslav/supernotes/blob/tasked/docs/Screenflow.md)
+- Installation: [Installation](https://github.com/panslav/supernotes/blob/tasked/docs/installation.md)

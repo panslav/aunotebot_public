@@ -1,4 +1,4 @@
-# Guide utilisateur AUNotes
+# Guide utilisateur AUNotebot
 
 ## 1. Démarrage
 1. Ouvrez le chat du bot.
@@ -61,4 +61,9 @@
 - `More -> Legal` ouvre les Terms & Conditions dans votre langue courante.
 
 ## 12. Contact
-- Idées et retours: `@evictorov`
+- Idées et retours: `@aunotebot_support`
+
+## Documents liés
+- Terms & Conditions: [Legal docs repository](https://github.com/panslav/aunotebot_public/tree/main/docs/legal)
+- Screenflow: [Screenflow](https://github.com/panslav/supernotes/blob/tasked/docs/Screenflow.md)
+- Installation: [Installation](https://github.com/panslav/supernotes/blob/tasked/docs/installation.md)

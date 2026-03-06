@@ -1,13 +1,13 @@
 # User Guide
 
-This guide explains how to use AUNotes bot from Telegram.
+This guide explains how to use AUNotebot from Telegram.
 
 ## 1. Start
 1. Open the bot chat.
 2. Send `/start`.
 3. You will see:
    - welcome message:
-     - `Welcome to the AUNotes bot.`
+     - `Welcome to the AUNotebot.`
      - `Take your notes where your life is!`
      - `📝🗣️🎥➡️🧠✅`
      - `📝 Capture your ideas, thoughts, and tasks.`
@@ -23,11 +23,11 @@ This guide explains how to use AUNotes bot from Telegram.
    - command menu (Telegram burger menu) with shortcuts
 
 Public Terms documents:
-- `https://github.com/panslav/aunotebot_public/tree/main/docs/legal`
+- [Legal docs repository](https://github.com/panslav/aunotebot_public/tree/main/docs/legal)
 - Open `More -> Legal` to open the Terms page for your current UI language.
 
 Public User Manuals:
-- `https://github.com/panslav/aunotebot_public/tree/main/docs/manuals`
+- [Public manuals repository](https://github.com/panslav/aunotebot_public/tree/main/docs/manuals)
 - Open `More -> Help` to open the manual page for your current UI language.
 
 ## 2. Language
@@ -284,3 +284,8 @@ When reporting a bug, include:
   - button renamed to `Copy invite link`
   - tapping it copies the referral link to clipboard (Telegram client support required)
 - Welcome message updated to the current v0.20.2 text.
+
+## Related Docs
+- Terms & Conditions: [Legal docs repository](https://github.com/panslav/aunotebot_public/tree/main/docs/legal)
+- Screenflow: [Screenflow](https://github.com/panslav/supernotes/blob/tasked/docs/Screenflow.md)
+- Installation: [Installation](https://github.com/panslav/supernotes/blob/tasked/docs/installation.md)

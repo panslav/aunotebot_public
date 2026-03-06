@@ -1,4 +1,4 @@
-# Manual do usuário do AUNotes
+# Manual do usuário do AUNotebot
 
 ## 1. Início
 1. Abra o chat do bot.
@@ -61,4 +61,9 @@
 - `More -> Legal` abre os Terms & Conditions no idioma atual.
 
 ## 12. Contato
-- Ideias e feedback: `@evictorov`
+- Ideias e feedback: `@aunotebot_support`
+
+## Documentos relacionados
+- Terms & Conditions: [Legal docs repository](https://github.com/panslav/aunotebot_public/tree/main/docs/legal)
+- Screenflow: [Screenflow](https://github.com/panslav/supernotes/blob/tasked/docs/Screenflow.md)
+- Installation: [Installation](https://github.com/panslav/supernotes/blob/tasked/docs/installation.md)

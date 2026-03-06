@@ -1,13 +1,11 @@
-# Termos e Condições (bot AUNotes)
-
-Outros idiomas: toque em um botão de bandeira abaixo.
+# Termos e Condições (AUNotebot)
 
 ---
 
 Última atualização: 6 de março de 2026
 
 ## 1. Partes e Definições
-1.1. Estes Termos regem o uso do bot AUNotes (o "Serviço").  
+1.1. Estes Termos regem o uso do AUNotebot (o "Serviço").  
 1.2. O Serviço é operado por um titular privado localizado na Espanha (o "Titular").  
 1.3. "Usuário" significa qualquer pessoa que acessa ou usa o Serviço.  
 1.4. "Conteúdo" inclui textos, mídias, links, metadados, tags, resumos e saídas processadas pelo Serviço.
@@ -16,6 +14,12 @@ Outros idiomas: toque em um botão de bandeira abaixo.
 2.1. Ao tocar em **Aceitar**, você confirma que leu e aceitou estes Termos.  
 2.2. Se não aceitar estes Termos, você não deve usar o Serviço.  
 2.3. Você declara possuir capacidade legal para aceitar estes Termos e usar o Serviço.
+
+## 3. Escopo do Serviço
+3.1. O Serviço ajuda a criar e gerenciar notas/tarefas no Telegram.  
+3.2. O Serviço pode usar funções com IA, como transcrição, OCR, resumo, marcação por tags, tradução e respostas tipo recall.  
+3.3. Os recursos são oferecidos a critério do Titular e podem variar por usuário, idioma, região, comportamento da plataforma ou disponibilidade técnica.
+3.4. O Serviço usa IA para gerar ou transformar partes do conteúdo (incluindo resumos, tags, transcrições, traduções e saída de voz).
 
 ## 4. Conteúdo do Usuário e Direitos
 4.1. Você continua responsável por todo o Conteúdo enviado.  
@@ -31,16 +35,21 @@ Outros idiomas: toque em um botão de bandeira abaixo.
 - distribuir malware, spam, phishing ou fraude;
 - tentar acesso não autorizado ou interferir na integridade do Serviço;
 - enviar conteúdo ilegal, difamatório ou que infrinja direitos.
+
 5.3. O Titular pode investigar uso indevido e cooperar com autoridades competentes nos termos da lei.
+
 5.4. Para qualquer funcionalidade baseada em OpenAI, o uso deve cumprir as Políticas de Uso da OpenAI (vigentes desde 29 de outubro de 2025, e futuras atualizações): https://openai.com/en-GB/policies/usage-policies/.  
+
 5.5. Sem limitação, você não deve usar o Serviço para categorias proibidas pela OpenAI, incluindo danos a pessoas, abuso de privacidade, exploração/risco de menores, manipulação ou engano (incluindo fraude/impersonação), decisões automatizadas de alto risco sem revisão humana, ou tentativas de burlar salvaguardas.
 
 ## 6. IA e Serviços de Terceiros
 6.1. O Serviço pode depender de provedores terceiros (incluindo Telegram e provedores de IA).  
 6.2. O Titular não se responsabiliza por indisponibilidades, falhas de API, restrições de política, limites de uso, comportamento de modelos, moderação ou tratamento de dados por terceiros.  
 6.3. Saídas de IA podem ser imprecisas ou incompletas e devem ser validadas pelo Usuário.
+
 6.4. Para cumprir políticas de terceiros (incluindo OpenAI), o Titular pode monitorar atividades sinalizadas e aplicar ações de moderação, incluindo avisos, restrição de recursos, bloqueio de conteúdo ou suspensão de acesso.  
 6.5. Se os requisitos de políticas de terceiros mudarem, o Titular poderá desativar, limitar ou alterar imediatamente os recursos afetados.
+
 6.6. Como o Serviço opera no Telegram, o uso também está sujeito aos Termos do Telegram (UE) e à Política de Privacidade do Telegram (UE), conforme atualizações:
 - https://telegram.org/tos/eu
 - https://telegram.org/privacy/eu
@@ -92,13 +101,5 @@ Outros idiomas: toque em um botão de bandeira abaixo.
 
 ## 14. Contato e Notificações
 14.1. Operador do Serviço: titular privado localizado na Espanha.  
-14.2. Suporte/feedback (Telegram): `@aunotebot_support`.
+14.2. Suporte/feedback (Telegram): https://t.me/aunotebot_support.
 14.3. O Titular pode atualizar estes Termos a qualquer momento. O uso continuado do Serviço após atualização constitui aceitação dos Termos atualizados.
-
-## 3. Escopo do Serviço
-3.1. O Serviço ajuda a criar e gerenciar notas/tarefas no Telegram.  
-3.2. O Serviço pode usar funções com IA, como transcrição, OCR, resumo, marcação por tags, tradução e respostas tipo recall.  
-3.3. Os recursos são oferecidos a critério do Titular e podem variar por usuário, idioma, região, comportamento da plataforma ou disponibilidade técnica.
-3.4. O Serviço usa IA para gerar ou transformar partes do conteúdo (incluindo resumos, tags, transcrições, traduções e saída de voz).
-
----

@@ -1,13 +1,11 @@
-# Términos y Condiciones (bot AUNotes)
-
-Otros idiomas: pulsa un botón de bandera abajo.
+# Términos y Condiciones (AUNotebot)
 
 ---
 
 Última actualización: 6 de marzo de 2026
 
 ## 1. Partes y Definiciones
-1.1. Estos Términos regulan el uso del bot AUNotes (el "Servicio").  
+1.1. Estos Términos regulan el uso del AUNotebot (el "Servicio").  
 1.2. El Servicio es operado por un titular privado ubicado en España (el "Titular").  
 1.3. "Usuario" significa toda persona que accede o utiliza el Servicio.  
 1.4. "Contenido" incluye textos, medios, enlaces, metadatos, etiquetas, resúmenes y cualquier salida procesada por el Servicio.
@@ -16,6 +14,12 @@ Otros idiomas: pulsa un botón de bandera abajo.
 2.1. Al pulsar **Aceptar**, confirmas que has leído y aceptado estos Términos.  
 2.2. Si no aceptas estos Términos, no debes utilizar el Servicio.  
 2.3. Declaras que tienes capacidad legal para aceptar estos Términos y usar el Servicio.
+
+## 3. Alcance del Servicio
+3.1. El Servicio ayuda a crear y gestionar notas/tareas en Telegram.  
+3.2. El Servicio puede usar funciones asistidas por IA, como transcripción, OCR, resumen, etiquetado, traducción y respuestas tipo recall.  
+3.3. Las funciones se ofrecen a discreción del Titular y pueden variar por usuario, idioma, región, comportamiento de la plataforma o disponibilidad técnica.
+3.4. El Servicio usa IA para generar o transformar partes del contenido (incluidos resúmenes, etiquetas, transcripciones, traducciones y salida de voz).
 
 ## 4. Contenido del Usuario y Derechos
 4.1. Sigues siendo responsable de todo el Contenido que envías.  
@@ -31,16 +35,21 @@ Otros idiomas: pulsa un botón de bandera abajo.
 - distribuir malware, spam, phishing o fraude;
 - intentar acceso no autorizado o interferir con la integridad del Servicio;
 - subir contenido ilegal, difamatorio o que infrinja derechos.
+
 5.3. El Titular puede investigar usos indebidos y cooperar con autoridades competentes conforme a la ley.
+
 5.4. Para cualquier función impulsada por OpenAI, el uso debe cumplir las Políticas de Uso de OpenAI (vigentes desde el 29 de octubre de 2025, y sus futuras actualizaciones): https://openai.com/en-GB/policies/usage-policies/.  
+
 5.5. Sin limitación, no puedes usar el Servicio para categorías prohibidas por OpenAI, incluidas daños a personas, abuso de privacidad, explotación o puesta en riesgo de menores, manipulación o engaño (incluido fraude/suplantación), decisiones automatizadas de alto riesgo sin revisión humana, o intentos de eludir salvaguardas.
 
 ## 6. IA y Servicios de Terceros
 6.1. El Servicio puede depender de proveedores terceros (incluidos Telegram y proveedores de IA).  
 6.2. El Titular no es responsable de caídas, fallos de API, restricciones de políticas, límites de uso, comportamiento de modelos, moderación o tratamiento de datos por terceros.  
 6.3. Las salidas de IA pueden ser inexactas o incompletas y deben validarse por el Usuario.
+
 6.4. Para cumplir políticas de proveedores terceros (incluido OpenAI), el Titular puede supervisar actividad marcada y aplicar acciones de moderación, incluidas advertencias, restricciones de funciones, bloqueo de contenido o suspensión de acceso.  
 6.5. Si cambian los requisitos de políticas de terceros, el Titular puede desactivar, limitar o modificar de inmediato las funciones afectadas.
+
 6.6. Dado que el Servicio opera sobre Telegram, su uso también está sujeto a los Términos de Telegram (UE) y a la Política de Privacidad de Telegram (UE), según se actualicen:
 - https://telegram.org/tos/eu
 - https://telegram.org/privacy/eu
@@ -92,13 +101,5 @@ Otros idiomas: pulsa un botón de bandera abajo.
 
 ## 14. Contacto y Notificaciones
 14.1. Operador del Servicio: titular privado ubicado en España.  
-14.2. Soporte/feedback (Telegram): `@aunotebot_support`.
+14.2. Soporte/feedback (Telegram): https://t.me/aunotebot_support.
 14.3. El Titular puede actualizar estos Términos en cualquier momento. El uso continuado del Servicio tras la actualización constituye aceptación de los Términos actualizados.
-
-## 3. Alcance del Servicio
-3.1. El Servicio ayuda a crear y gestionar notas/tareas en Telegram.  
-3.2. El Servicio puede usar funciones asistidas por IA, como transcripción, OCR, resumen, etiquetado, traducción y respuestas tipo recall.  
-3.3. Las funciones se ofrecen a discreción del Titular y pueden variar por usuario, idioma, región, comportamiento de la plataforma o disponibilidad técnica.
-3.4. El Servicio usa IA para generar o transformar partes del contenido (incluidos resúmenes, etiquetas, transcripciones, traducciones y salida de voz).
-
----
