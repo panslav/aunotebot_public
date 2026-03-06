@@ -3,27 +3,27 @@
 ## 1. Início
 1. Abra o chat do bot.
 2. Envie `/start`.
-3. Na tela inicial: `Find`, `Tasks`, `Notes`, `Reminders`, `Drafts`, `More`.
+3. Na tela inicial: `Buscar`, `Tarefas`, `Notas`, `Lembretes`, `Rascunhos`, `Mais`.
 
 ## 2. Idioma
-- Menu: `More -> Settings -> Language`.
+- Menu: `More -> Settings -> Idioma`.
 - Idiomas suportados: English, Русский, Українська, Español, Português, Français.
 
 ## 3. Criar uma nota
 1. Envie texto/voz/vídeo/imagem.
 2. O bot cria um rascunho.
-3. Toque em `📝 Save as Note`.
+3. Toque em `📝 Salvar como nota`.
 
 ## 4. Criar uma tarefa
-- No rascunho: `🟧 Save as Task`.
+- No rascunho: `🟧 Salvar como tarefa`.
 - Ou na nota: `⬛ Make Task`.
 
 ## 5. Encaminhar mensagens
 - Várias mensagens encaminhadas em uma única ação viram um rascunho só.
-- O tempo de mesclagem é definido em `More -> Settings -> Multiple message merge time`.
+- O tempo de mesclagem é definido em `More -> Settings -> Tempo de fusão de múltiplas mensagens`.
 - Hashtags enviados separadamente são adicionados como tags do rascunho.
 
-## 6. Busca e Recall
+## 6. Busca e Memória
 - `🔎 Find` ativa modo interativo.
 - Envie sua pergunta em texto livre.
 - O bot retorna um resumo e botões com os itens mais relevantes.
@@ -46,15 +46,15 @@
 
 ## 10. Configurações
 `More -> Settings`:
-- Language
-- Timezone
-- Mark as done
-- Copy text for edits
-- Daily task digest
-- Evening summary
-- Multiple message merge time
-- No. of items
-- Show bottom menu
+- Idioma
+- Fuso horário
+- Ao marcar como concluída
+- Copiar texto para edição
+- Resumo diário de tarefas
+- Resumo da noite
+- Tempo de fusão de múltiplas mensagens
+- Nº de itens
+- Mostrar menu inferior
 
 ## 11. Ajuda e legal
 - `More -> Help` abre este manual na web.
@@ -64,6 +64,6 @@
 - Ideias e feedback: `@aunotebot_support`
 
 ## Documentos relacionados
-- Terms & Conditions: [Legal docs repository](https://github.com/panslav/aunotebot_public/tree/main/docs/legal)
-- Screenflow: [Screenflow](https://github.com/panslav/supernotes/blob/tasked/docs/Screenflow.md)
-- Installation: [Installation](https://github.com/panslav/supernotes/blob/tasked/docs/installation.md)
+- Termos e Condições: [Legal docs repository](https://github.com/panslav/aunotebot_public/tree/main/docs/legal)
+- Fluxo de telas: [Screenflow](https://github.com/panslav/supernotes/blob/tasked/docs/Screenflow.md)
+- Instalação: [Installation](https://github.com/panslav/supernotes/blob/tasked/docs/installation.md)

@@ -3,30 +3,32 @@
 ## 1. Старт
 1. Откройте чат с ботом.
 2. Отправьте `/start`.
-3. На стартовом экране доступны: `Find`, `Tasks`, `Notes`, `Reminders`, `Drafts`, `More`.
+3. На стартовом экране доступны: `Поиск`, `Задачи`, `Заметки`, `Напоминания`, `Черновики`, `Ещё`.
 
 ## 2. Язык
-- Меню: `More -> Settings -> Language`.
+- Меню: `More -> Settings -> Язык`.
 - Поддерживаются: English, Русский, Українська, Español, Português, Français.
 
-## 3. Создание заметки или задачи
-Заметка - это набор текста; задача - это заметка, которую нужно выполнить (у неё может быть установлен срок исполнения).
+## 3. Создание заметки
 1. Отправьте текст/голос/видео/изображение.
 2. Бот создаст черновик.
-3. Нажмите `📝 Save as Note` для создания заметки или `🟧 Save as Task` для создания задачи.
-   Впоследствии можно будет превратить заметку в задачу, нажав на кнопку `⬛ Make Task`.
+3. Нажмите `📝 Сохранить как заметку`.
 
-## 4. Пересылка сообщений
+## 4. Создание задачи
+- В черновике: `🟧 Сохранить как задачу`.
+- Или в карточке заметки: `⬛ Make Task`.
+
+## 5. Пересылка сообщений
 - Несколько пересланных сообщений в одном действии объединяются в один черновик.
-- Окно объединения настраивается: `More -> Settings -> Multiple message merge time`.
+- Окно объединения настраивается: `More -> Settings -> Время объединения нескольких сообщений`.
 - Хэштеги в отдельном сообщении добавляются в теги черновика.
 
-## 5. Поиск
+## 6. Поиск и Сводка
 - Кнопка `🔎 Find` включает интерактивный режим.
 - Отправьте вопрос в свободной форме.
 - Бот вернет краткий ответ и список релевантных элементов кнопками.
 
-## 6. Действия в карточке
+## 7. Действия в карточке
 ### Заметка
 - `✏️ Edit`, `🏷️ Tags`, `⬛ Make Task`, `❌ Remove`, `⬅️ Back`
 
@@ -44,15 +46,15 @@
 
 ## 10. Настройки
 `More -> Settings`:
-- Language
-- Timezone
-- Mark as done
-- Copy text for edits
-- Daily task digest
-- Evening summary
-- Multiple message merge time
-- No. of items
-- Show bottom menu
+- Язык
+- Часовой пояс
+- При отметке как выполнено
+- Копировать текст для редактирования
+- Ежедневная сводка задач
+- Вечерняя сводка
+- Время объединения нескольких сообщений
+- Кол-во элементов
+- Показывать нижнее меню
 
 ## 11. Помощь и правовые документы
 - `More -> Help` открывает это руководство в веб-версии.
@@ -62,6 +64,6 @@
 - Идеи и вопросы: `@aunotebot_support`
 
 ## Связанные документы
-- Terms & Conditions: [Legal docs repository](https://github.com/panslav/aunotebot_public/tree/main/docs/legal)
-- Screenflow: [Screenflow](https://github.com/panslav/supernotes/blob/tasked/docs/Screenflow.md)
-- Installation: [Installation](https://github.com/panslav/supernotes/blob/tasked/docs/installation.md)
+- Условия использования: [Legal docs repository](https://github.com/panslav/aunotebot_public/tree/main/docs/legal)
+- Схема экранов: [Screenflow](https://github.com/panslav/supernotes/blob/tasked/docs/Screenflow.md)
+- Установка: [Installation](https://github.com/panslav/supernotes/blob/tasked/docs/installation.md)

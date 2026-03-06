@@ -1,19 +1,19 @@
 # aunotebot_public
 
-Public legal and user-facing static docs for AUNotes bot.
+Public legal and user-facing static docs for AUNotebot.
 
 ## Terms & Conditions
-- docs/legal/terms-and-conditions_en.md
-- docs/legal/terms-and-conditions_es.md
-- docs/legal/terms-and-conditions_pt.md
-- docs/legal/terms-and-conditions_fr.md
-- docs/legal/terms-and-conditions_ru.md
-- docs/legal/terms-and-conditions_uk.md
+- [English](https://github.com/panslav/aunotebot_public/blob/main/docs/legal/terms-and-conditions_en.md)
+- [Español](https://github.com/panslav/aunotebot_public/blob/main/docs/legal/terms-and-conditions_es.md)
+- [Português](https://github.com/panslav/aunotebot_public/blob/main/docs/legal/terms-and-conditions_pt.md)
+- [Français](https://github.com/panslav/aunotebot_public/blob/main/docs/legal/terms-and-conditions_fr.md)
+- [Русский](https://github.com/panslav/aunotebot_public/blob/main/docs/legal/terms-and-conditions_ru.md)
+- [Українська](https://github.com/panslav/aunotebot_public/blob/main/docs/legal/terms-and-conditions_uk.md)
 
 ## User Manuals
-- docs/manuals/user-manual_en.md
-- docs/manuals/user-manual_es.md
-- docs/manuals/user-manual_pt.md
-- docs/manuals/user-manual_fr.md
-- docs/manuals/user-manual_ru.md
-- docs/manuals/user-manual_uk.md
+- [English](https://github.com/panslav/aunotebot_public/blob/main/docs/manuals/user-manual_en.md)
+- [Español](https://github.com/panslav/aunotebot_public/blob/main/docs/manuals/user-manual_es.md)
+- [Português](https://github.com/panslav/aunotebot_public/blob/main/docs/manuals/user-manual_pt.md)
+- [Français](https://github.com/panslav/aunotebot_public/blob/main/docs/manuals/user-manual_fr.md)
+- [Русский](https://github.com/panslav/aunotebot_public/blob/main/docs/manuals/user-manual_ru.md)
+- [Українська](https://github.com/panslav/aunotebot_public/blob/main/docs/manuals/user-manual_uk.md)
