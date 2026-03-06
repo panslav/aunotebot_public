@@ -4,7 +4,7 @@ Otros idiomas: pulsa un botón de bandera abajo.
 
 ---
 
-Última actualización: 4 de marzo de 2026
+Última actualización: 6 de marzo de 2026
 
 ## 1. Partes y Definiciones
 1.1. Estos Términos regulan el uso del bot AUNotes (el "Servicio").  
@@ -32,11 +32,18 @@ Otros idiomas: pulsa un botón de bandera abajo.
 - intentar acceso no autorizado o interferir con la integridad del Servicio;
 - subir contenido ilegal, difamatorio o que infrinja derechos.
 5.3. El Titular puede investigar usos indebidos y cooperar con autoridades competentes conforme a la ley.
+5.4. Para cualquier función impulsada por OpenAI, el uso debe cumplir las Políticas de Uso de OpenAI (vigentes desde el 29 de octubre de 2025, y sus futuras actualizaciones): https://openai.com/en-GB/policies/usage-policies/.  
+5.5. Sin limitación, no puedes usar el Servicio para categorías prohibidas por OpenAI, incluidas daños a personas, abuso de privacidad, explotación o puesta en riesgo de menores, manipulación o engaño (incluido fraude/suplantación), decisiones automatizadas de alto riesgo sin revisión humana, o intentos de eludir salvaguardas.
 
 ## 6. IA y Servicios de Terceros
 6.1. El Servicio puede depender de proveedores terceros (incluidos Telegram y proveedores de IA).  
 6.2. El Titular no es responsable de caídas, fallos de API, restricciones de políticas, límites de uso, comportamiento de modelos, moderación o tratamiento de datos por terceros.  
 6.3. Las salidas de IA pueden ser inexactas o incompletas y deben validarse por el Usuario.
+6.4. Para cumplir políticas de proveedores terceros (incluido OpenAI), el Titular puede supervisar actividad marcada y aplicar acciones de moderación, incluidas advertencias, restricciones de funciones, bloqueo de contenido o suspensión de acceso.  
+6.5. Si cambian los requisitos de políticas de terceros, el Titular puede desactivar, limitar o modificar de inmediato las funciones afectadas.
+6.6. Dado que el Servicio opera sobre Telegram, su uso también está sujeto a los Términos de Telegram (UE) y a la Política de Privacidad de Telegram (UE), según se actualicen:
+- https://telegram.org/tos/eu
+- https://telegram.org/privacy/eu
 
 ## 7. Cambios, Disponibilidad y Precio
 7.1. El Servicio se ofrece "tal cual" y "según disponibilidad".  
@@ -69,6 +76,15 @@ Otros idiomas: pulsa un botón de bandera abajo.
 12.1. Los datos y metadatos del Usuario se tratan para prestar la funcionalidad del Servicio.  
 12.2. El Servicio almacena metadatos de aceptación, incluyendo fecha/hora e identificador técnico de origen (IP cuando la plataforma lo permita, o marcador de no disponibilidad en caso contrario).  
 12.3. El tratamiento de datos se realiza conforme a la normativa aplicable de la UE/España, incluido RGPD cuando corresponda.
+12.4. Para prestar funciones de IA, el Contenido relevante puede transmitirse a OpenAI y procesarse bajo los términos y políticas de OpenAI.
+12.5. El Titular busca tratar los datos personales de conformidad con el Reglamento (UE) 2016/679 (RGPD) y, cuando aplique, el UK GDPR incorporado al derecho del Reino Unido y complementado por la Data Protection Act 2018.
+12.6. Según el contexto de tratamiento, el Titular puede actuar como responsable independiente para operaciones del Servicio, mientras Telegram y OpenAI actúan como proveedores separados bajo sus propios términos.
+12.7. Cuando la ley lo permita, el Usuario puede solicitar acceso, rectificación, supresión, limitación, oposición y portabilidad de datos mediante el contacto de soporte.
+12.8. Referencias de cumplimiento:
+- Términos de Telegram (UE): https://telegram.org/tos/eu
+- Privacidad de Telegram (UE): https://telegram.org/privacy/eu
+- Texto RGPD UE: https://eur-lex.europa.eu/eli/reg/2016/679/oj
+- UK GDPR (guía ICO): https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/
 
 ## 13. Ley Aplicable y Jurisdicción
 13.1. Estos Términos se rigen por la ley española.  
@@ -83,6 +99,6 @@ Otros idiomas: pulsa un botón de bandera abajo.
 3.1. El Servicio ayuda a crear y gestionar notas/tareas en Telegram.  
 3.2. El Servicio puede usar funciones asistidas por IA, como transcripción, OCR, resumen, etiquetado, traducción y respuestas tipo recall.  
 3.3. Las funciones se ofrecen a discreción del Titular y pueden variar por usuario, idioma, región, comportamiento de la plataforma o disponibilidad técnica.
+3.4. El Servicio usa IA para generar o transformar partes del contenido (incluidos resúmenes, etiquetas, transcripciones, traducciones y salida de voz).
 
 ---
-

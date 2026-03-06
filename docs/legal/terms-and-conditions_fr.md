@@ -4,7 +4,7 @@ Autres langues : cliquez sur un bouton drapeau ci-dessous.
 
 ---
 
-Dernière mise à jour : 4 mars 2026
+Dernière mise à jour : 6 mars 2026
 
 ## 1. Parties et Définitions
 1.1. Les présentes Conditions régissent l'utilisation du bot AUNotes (le « Service »).  
@@ -32,11 +32,18 @@ Dernière mise à jour : 4 mars 2026
 - tenter un accès non autorisé ou perturber l'intégrité du Service ;
 - publier du contenu illicite, diffamatoire ou portant atteinte aux droits.
 5.3. Le Propriétaire peut enquêter sur les abus et coopérer avec les autorités compétentes dans le cadre de la loi.
+5.4. Pour toute fonctionnalité reposant sur OpenAI, l'utilisation doit respecter les Politiques d'utilisation d'OpenAI (en vigueur depuis le 29 octobre 2025, et leurs mises à jour): https://openai.com/en-GB/policies/usage-policies/.  
+5.5. Sans limitation, vous ne devez pas utiliser le Service pour des catégories interdites par OpenAI, notamment les atteintes aux personnes, les abus de vie privée, l'exploitation ou la mise en danger de mineurs, la manipulation ou la tromperie (y compris fraude/usurpation), les décisions automatisées à haut risque sans contrôle humain, ou les tentatives de contournement des garde-fous.
 
 ## 6. IA et Services Tiers
 6.1. Le Service peut dépendre de fournisseurs tiers (y compris Telegram et des fournisseurs IA).  
 6.2. Le Propriétaire n'est pas responsable des pannes, échecs d'API, restrictions de politique, limitations de débit, comportement des modèles, décisions de modération ou traitement des données par des tiers.  
 6.3. Les sorties IA peuvent être inexactes ou incomplètes et doivent être vérifiées de manière indépendante par l'Utilisateur.
+6.4. Pour respecter les politiques des fournisseurs tiers (y compris OpenAI), le Propriétaire peut surveiller les activités signalées et appliquer des actions de modération, y compris avertissements, restrictions de fonctionnalités, blocage de contenu ou suspension d'accès.  
+6.5. Si les exigences des politiques tierces évoluent, le Propriétaire peut immédiatement désactiver, limiter ou modifier les fonctionnalités concernées.
+6.6. Étant donné que le Service fonctionne sur Telegram, l'utilisation est également soumise aux Conditions Telegram (UE) et à la Politique de confidentialité Telegram (UE), telles que mises à jour :
+- https://telegram.org/tos/eu
+- https://telegram.org/privacy/eu
 
 ## 7. Modifications, Disponibilité et Tarification
 7.1. Le Service est fourni « en l'état » et « selon disponibilité ».  
@@ -69,6 +76,15 @@ Dernière mise à jour : 4 mars 2026
 12.1. Les données et métadonnées Utilisateur sont traitées afin de fournir les fonctionnalités du Service.  
 12.2. Le Service stocke des métadonnées d'acceptation, y compris l'horodatage d'acceptation et un marqueur technique d'origine (IP lorsqu'elle est disponible via la plateforme, ou marqueur d'indisponibilité sinon).  
 12.3. Le traitement des données est effectué conformément au droit applicable de l'UE/Espagne, y compris le RGPD lorsque applicable.
+12.4. Pour fournir des fonctionnalités IA, le Contenu pertinent peut être transmis à OpenAI et traité selon les conditions et politiques d'OpenAI.
+12.5. Le Propriétaire vise à traiter les données personnelles conformément au Règlement (UE) 2016/679 (RGPD) et, lorsque applicable, au UK GDPR intégré au droit du Royaume-Uni et complété par le Data Protection Act 2018.
+12.6. Selon le contexte de traitement, le Propriétaire peut agir comme responsable indépendant pour les opérations du Service, tandis que Telegram et OpenAI agissent comme fournisseurs distincts selon leurs propres conditions.
+12.7. Lorsque la loi l'autorise, l'Utilisateur peut demander l'accès, la rectification, l'effacement, la limitation, l'opposition et la portabilité des données via le contact support.
+12.8. Références de conformité :
+- Conditions Telegram (UE) : https://telegram.org/tos/eu
+- Politique de confidentialité Telegram (UE) : https://telegram.org/privacy/eu
+- Texte RGPD UE : https://eur-lex.europa.eu/eli/reg/2016/679/oj
+- UK GDPR (guide ICO) : https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/
 
 ## 13. Droit Applicable et Juridiction
 13.1. Les présentes Conditions sont régies par le droit espagnol.  
@@ -83,3 +99,4 @@ Dernière mise à jour : 4 mars 2026
 3.1. Le Service aide à créer et gérer des notes/tâches dans Telegram.  
 3.2. Le Service peut utiliser des fonctions IA, notamment transcription, OCR, résumé, tagging, traduction et réponses de type recall.  
 3.3. Les fonctionnalités sont fournies à la discrétion du Propriétaire et peuvent varier selon l'utilisateur, la langue, la région, le comportement de la plateforme ou la disponibilité technique.
+3.4. Le Service utilise l'IA pour générer ou transformer des parties du contenu (notamment résumés, tags, transcriptions, traductions et sortie vocale).
