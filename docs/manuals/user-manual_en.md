@@ -5,15 +5,20 @@ This guide explains how to use AUNotebot from Telegram.
 ## 1. Start
 1. Open the bot chat.
 2. Send `/start`.
-3. You will see:
+3. `/start` always reloads and reapplies your saved settings (especially Language and bottom-menu visibility).
+4. You will see:
    - welcome message:
      - `Welcome to the AUNotebot.`
      - `Take your notes where your life is!`
-     - `📝🗣️🎥➡️🧠✅`
+     - `📝🗣️🎥🌃➡️🧠✅`
      - `📝 Capture your ideas, thoughts, and tasks.`
      - `🛡️ Never forget anything anymore.`
-   - legal notice line in the same welcome message:
-     - `By using the bot you agree with the Terms & Conditions (More -> Legal).`
+     - `1️⃣  Text me, voice me, send me an image, a circle or a full-sized video.`
+     - `2️⃣  I will save it and create a note or a task. My AI brain will analyse it and summarise your note.`
+     - `3️⃣ Keep a note, or make it assignable task!`
+     - `⚖️ By using the bot you agree with the Terms & Conditions (click More -> Legal).`
+     - `❓ Click More -> Help for a user manual.`
+     - `✉️ Ideas or feedback: @aunotebot_support`
    - current version on the last line of the welcome message
    - inline counters + shortcuts:
      - row 1: `Find`
@@ -25,6 +30,11 @@ This guide explains how to use AUNotebot from Telegram.
 Public Terms documents:
 - [Legal docs repository](https://github.com/panslav/aunotebot_public/tree/main/docs/legal)
 - Open `More -> Legal` to open the Terms page for your current UI language.
+- OpenAI Usage Policies (AI features baseline):
+  - https://openai.com/en-GB/policies/usage-policies/
+  - AI features may be limited or disabled if a request violates these policies.
+- Admin tracking note:
+  - bot stores action audit entries (`moment`, `action_type`) and sharing edges (`source`, `target`, `action_type`) for operations/graph analytics.
 
 Public User Manuals:
 - [Public manuals repository](https://github.com/panslav/aunotebot_public/tree/main/docs/manuals)
@@ -73,8 +83,9 @@ Option B:
 
 ## 6. Voice and Video
 1. Send voice message or supported video message.
-2. Bot transcribes and prepares a draft.
-3. Tap `📝 Save as Note` or `🟧 Save as Task`.
+2. Bot immediately shows a processing status message when parsing audio/video starts.
+3. Bot transcribes and prepares a draft.
+4. Tap `📝 Save as Note` or `🟧 Save as Task`.
 
 ## 7. Images and Screenshots
 1. Send or forward an image/screenshot.
@@ -121,7 +132,9 @@ Option B:
 - `✏️ Edit`
 - `🏷️ Tags`
 - `⬛ Make Task`
+- `🔊 Make Voice`
 - `🔗 Merge`
+- `📤 Share`
 - `❌ Remove`
 - `⬅️ Back`
 
@@ -134,6 +147,7 @@ Option B:
 - `🔁 Make Note`
 - `🔗 Merge`
 - `❌ Remove`
+- `🔊 Make Voice`
 - `⬅️ Back`
 
 ### Task assignment with Contacts
@@ -144,6 +158,21 @@ Option B:
    - manual input option (`@handle` or phone)
 4. If you type a new valid `@handle`/phone, it is saved to your Contacts automatically.
 5. If recipient has already started the bot, assignment is sent and task is linked to that user.
+
+### Note sharing with Contacts
+1. Open a regular note.
+2. Tap `📤 Share`.
+3. Bot shows:
+   - your saved contacts as buttons
+   - manual input option (`@handle` or phone)
+4. If you type a new valid `@handle`/phone, it is saved to your Contacts automatically.
+5. If recipient has already started the bot, the note is shared and delivered in their chat (including attachments).
+
+### Make voice (Text-to-speech)
+1. Open any note or task.
+2. Tap `🔊 Make Voice`.
+3. Bot immediately shows a system notification that text-to-voice generation has started.
+4. Bot generates a voice message using OpenAI (`onyx` voice), sends it to chat, and attaches it to that item.
 
 ## 11. Merge Items (Note/Task)
 1. Open an item.
@@ -265,27 +294,8 @@ When reporting a bug, include:
 - the exact bot response (or that there was no response)
 - whether `/start` still works while other buttons fail
 
-## 21. Latest Updates (v0.20.2)
-- Task assignment now includes attachments:
-  - if the original task has media (photo/voice/video/etc.), assigned user receives the same attachment(s)
-  - attachments are also saved inside the assigned task item
-- Self-assignment behavior:
-  - if you try to assign a task to yourself, bot shows a system warning and keeps task view visible
-- Summary rendering:
-  - item view now shows a horizontal delimiter line right after the summary header
-  - summary generation now avoids direct body duplication where possible
-- Formatting preservation:
-  - original Telegram text formatting is preserved as Markdown when note text is captured
-- `More` menu layout:
-  - row 1: `Settings`, `Archive`
-  - row 2: `Points`, `Contacts, Invite`
-  - row 3: `Legal`, `Help`
-- Invite flow:
-  - button renamed to `Copy invite link`
-  - tapping it copies the referral link to clipboard (Telegram client support required)
-- Welcome message updated to the current v0.20.2 text.
-
 ## Related Docs
 - Terms & Conditions: [Legal docs repository](https://github.com/panslav/aunotebot_public/tree/main/docs/legal)
-- Screenflow: [Screenflow](https://github.com/panslav/supernotes/blob/tasked/docs/Screenflow.md)
-- Installation: [Installation](https://github.com/panslav/supernotes/blob/tasked/docs/installation.md)
+- Screenflow: [Screenflow](/docs/Screenflow.md)
+- Installation: [Installation](/docs/installation.md)
+- Documentation index: [Docs Home](/docs/README.md)

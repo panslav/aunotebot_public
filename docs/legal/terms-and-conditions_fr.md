@@ -150,3 +150,14 @@ Dernière mise à jour : 6 mars 2026
 14.2. Support/retour (Telegram) : https://t.me/aunotebot_support.
 
 14.3. Le Propriétaire peut modifier ces Conditions à tout moment. La poursuite de l'utilisation du Service après modification vaut acceptation des Conditions mises à jour.
+
+## 15. Information sur le suivi administratif
+
+15.1. Le Service enregistre un index administratif des utilisateurs (`id`, `handle`) à des fins d’exploitation.
+
+15.2. Le Service enregistre les actions du bot avec les champs : `id`, `moment` (UTC), `action_type`, `ip`.
+
+15.3. Le mode polling de Telegram Bot API n’expose pas l’adresse IP réelle de l’utilisateur final au Service ; par conséquent, `ip` est stocké comme `unavailable_via_telegram_bot_api`.
+
+15.4. Le Service enregistre les relations de partage avec les champs : `id`, `source`, `target`, `action_type` (`shr` pour partage de note, `asgn` pour attribution de tâche), avec un miroir CSV pour les graphes.
+

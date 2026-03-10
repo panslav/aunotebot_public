@@ -150,3 +150,14 @@
 14.2. Suporte/feedback (Telegram): https://t.me/aunotebot_support.
 
 14.3. O Titular pode atualizar estes Termos a qualquer momento. O uso continuado do Serviço após atualização constitui aceitação dos Termos atualizados.
+
+## 15. Divulgação de rastreamento administrativo
+
+15.1. O Serviço registra um índice administrativo de usuários (`id`, `handle`) para suporte operacional.
+
+15.2. O Serviço registra ações do bot com os campos: `id`, `moment` (UTC), `action_type`, `ip`.
+
+15.3. O modo polling da Telegram Bot API não expõe o IP real do usuário final ao Serviço; por isso, `ip` é armazenado como `unavailable_via_telegram_bot_api`.
+
+15.4. O Serviço registra relações de compartilhamento com os campos: `id`, `source`, `target`, `action_type` (`shr` para compartilhamento de nota, `asgn` para atribuição de tarefa), incluindo espelho CSV para grafos.
+

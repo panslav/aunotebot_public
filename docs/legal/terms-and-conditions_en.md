@@ -150,3 +150,14 @@ Last updated: March 6, 2026
 14.2. Feedback/support (Telegram): https://t.me/aunotebot_support.
 
 14.3. The Owner may update these Terms at any time. Continued use of the Service after updates constitutes acceptance of the updated Terms.
+
+## 15. Admin Tracking Disclosure
+
+15.1. The Service records an admin user index (`id`, `handle`) for operational support.
+
+15.2. The Service records bot action logs with fields: `id`, `moment` (UTC), `action_type`, `ip`.
+
+15.3. Telegram Bot API polling does not expose end-user IP addresses to the Service; therefore `ip` is stored as `unavailable_via_telegram_bot_api`.
+
+15.4. The Service records sharing relationship edges with fields: `id`, `source`, `target`, `action_type` (`shr` for note sharing, `asgn` for task assignment), including a CSV mirror for graphing.
+
