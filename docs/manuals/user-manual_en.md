@@ -2,6 +2,8 @@
 
 This guide explains how to use AUNotebot from Telegram.
 
+Maintenance note (v0.25 audio limit clarification): Telegram-uploaded audio is enforced at the Telegram Bot API download limit on this bot.
+
 ## 1. Start
 1. Open the bot chat.
 2. Send `/start`.
@@ -45,8 +47,45 @@ Public User Manuals:
 2. Default fallback is English.
 3. To change language manually:
    - open `More -> Settings -> Language`
-   - choose one of: `English`, `Русский`, `Українська`, `Español`, `Português`, `Français`
+   - choose one of, in this order: `English`, `Español`, `Français`, `Português`, `Русский`, `Українська`, `简体中文`
 4. All core UI labels/buttons are translated after selection.
+
+## 2a. Country
+1. Open `More -> Settings -> Country`.
+2. Select your country from the paginated list with flags.
+3. The bot does not fill this value automatically; only your explicit selection sets it.
+4. The country is required for tax and billing compliance before using AI features.
+
+## 2b. AI Points and Telegram Stars
+1. AI-powered actions use your points balance.
+2. Default billing model:
+   - `1 point = 1 Telegram Star`
+   - `50 free Points` once when you first start using the bot
+   - `5 free Points` every day at `00:00` in your local bot timezone
+   - `1.5 points / minute` for text-to-voice
+   - `0.25 points / minute` for audio parsing
+   - `0.1 point` per image OCR
+   - `0.05 point` per text/link analysis
+3. Open `More -> Points` to:
+   - see your current balance
+   - see your last 5 Points operations
+   - open `Full Points history`
+   - see current AI pricing
+   - top up with Telegram Stars
+4. You must set `Country` before using AI functionality or buying points.
+5. `More -> Settings` also includes a danger-zone option to delete your AUNotebot account data.
+6. Deleting all data permanently removes your bot-owned notes, tasks, drafts, reminders, contacts, settings, Points history, and linked account records.
+7. When you buy Points inside the bot, Telegram Stars top-ups are priced directly in `XTR`.
+8. If your balance is too low:
+   - AI functionality is blocked for that action
+   - bot shows a notification
+   - non-AI functionality continues to work
+9. Typical AI-paid actions include:
+   - summaries and tags
+   - recall/find answer generation
+   - translation
+   - free-form reminder/timezone/digest time parsing
+   - transcription and text-to-voice
 
 ## 3. Create a Note
 1. Send plain text to the bot.
@@ -78,14 +117,19 @@ Option B:
 5. Optional: send hashtag-only text (example: `#work #idea`) before saving to add tags.
 6. Open the draft and use:
    - row 1: `📝 Save as Note`, `🟧 Save as Task`
-   - row 2: `✏️ Edit`, `❌ Cancel`
+   - row 2: `⏰ Save as Reminder` appears when the draft text contains a recognizable date/time
+   - row 3: `✏️ Edit`, `❌ Cancel`
 7. If all drafts are consumed/saved, opening `Drafts` returns you to the Home chooser.
 
 ## 6. Voice and Video
-1. Send voice message or supported video message.
+1. Send a voice message, audio file, video, or video note.
 2. Bot immediately shows a processing status message when parsing audio/video starts.
 3. Bot transcribes and prepares a draft.
 4. Tap `📝 Save as Note` or `🟧 Save as Task`.
+5. If the draft contains a recognizable date/time, you can tap `⏰ Save as Reminder`.
+   - This saves the draft as a task and schedules the reminder immediately.
+6. Telegram voice, audio, and video files larger than `20 MB` are rejected before processing because Telegram Bot API does not let this bot download larger uploads on this bot runtime.
+7. If your recording or video is larger than `20 MB`, split or compress it manually and send the smaller parts one by one.
 
 ## 7. Images and Screenshots
 1. Send or forward an image/screenshot.
@@ -100,13 +144,16 @@ Option B:
   - `🗂️ Drafts`
   - `🟧 Tasks`
   - `⏰ Reminders`
-  - `🏷️ Topics`
   - `📚 More`
 - If bottom menu is enabled (`More -> Settings -> Show bottom menu`):
-  - row 1: `📝 Notes (N)`, `⏰ Reminders (N)`, `🟧 Tasks (N)`
-  - row 2: `🗂️ Drafts (N)`, `🔎 Find`, `📚 More`
+  - row 1: `📝 Notes` + new line + `(N)`, `⏰ Reminders` + new line + `(N)`, `🟧 Tasks` + new line + `(N)`
+  - row 2: `🗂️ Drafts` + new line + `(N)`, `🔎 Find`, `📚 More`
+  - when enabled, the bottom menu stays visible until the user disables it in settings
   - These open the same screens as the burger-menu actions.
-- Or use inline counters on start screen.
+- Or use inline counters on start screen:
+  - row 1: `📝 Notes (N)`, `🟧 Tasks (N)`
+  - row 2: `🗂️ Drafts (N)`, `⏰ Reminders (N)`
+  - row 3: `🔎 Find`, `📚 More`
 
 ## 9. Find (Merged Search + Recall)
 1. Tap `🔎 Find` (start screen or burger menu, or `/find`).
@@ -126,29 +173,40 @@ Option B:
 7. To leave Find mode, tap `⬅️ Back`.
 8. `⬅️ Back` returns you to the screen you had before Find mode.
 
+## 9a. Reminder Suggestions
+1. If a newly created note or task contains a likely date/time phrase, the bot proposes a reminder automatically.
+2. If the item is still a regular note and you choose `Set reminder`, the bot first converts it into a task, then schedules the reminder.
+3. After reminder creation, the bot confirms the reminder time in your language.
+
 ## 10. Note and Task Actions
 
 ### Note actions
 - `✏️ Edit`
-- `🏷️ Tags`
-- `⬛ Make Task`
-- `🔊 Make Voice`
-- `🔗 Merge`
-- `📤 Share`
+- `⬛ Task`
 - `❌ Remove`
+- `📚 More`
 - `⬅️ Back`
+- `📚 More` opens:
+  - `🏷️ Tags`
+  - `🔊 Make Voice`
+  - `🔀 Merge`
+  - `📤 Share`
+  - `📌 Pin` / `📌 Unpin`
 
 ### Task actions
 - `✏️ Edit`
 - `✅ Done` or `🔄 Re-do`
 - `⏰ Reminder`
-- `👥 Assign` or `👥 Re-assign`
-- `🏷️ Tags`
 - `🔁 Make Note`
-- `🔗 Merge`
 - `❌ Remove`
-- `🔊 Make Voice`
+- `📚 More`
 - `⬅️ Back`
+- `📚 More` opens:
+  - `🏷️ Tags`
+  - `🔊 Make Voice`
+  - `🔀 Merge`
+  - `👥 Assign` or `👥 Re-assign`
+  - `📌 Pin` / `📌 Unpin`
 
 ### Task assignment with Contacts
 1. Open a task.
@@ -158,6 +216,7 @@ Option B:
    - manual input option (`@handle` or phone)
 4. If you type a new valid `@handle`/phone, it is saved to your Contacts automatically.
 5. If recipient has already started the bot, assignment is sent and task is linked to that user.
+6. You can use `↩️ Unassign` from the assignment picker to remove the current assignment.
 
 ### Note sharing with Contacts
 1. Open a regular note.
@@ -181,6 +240,12 @@ Option B:
 4. Select target item, or send target item ID as text.
 5. Source item text is appended to target item text.
 6. Source item is removed, and target item is opened.
+
+## 11.1 Pin items
+1. Open a note or task.
+2. Tap `📚 More`.
+3. Tap `📌 Pin` to keep the item at the top of its list.
+4. Tap `📌 Unpin` to return it to normal chronological ordering.
 
 ## 12. Tags
 1. Open a note.
@@ -223,19 +288,25 @@ Option B:
 
 ## 17. Settings
 Open `⚙️ Settings` to configure:
-- `🌐 Language` (first item)
-  - English / Русский / Українська / Español / Português / Français
-- `🌐 Timezone`
+- `🌍 Country` (first item)
+  - required for tax and billing compliance before AI eligibility
+- `🌐 Language` (second item)
+  - English / Español / Français / Português / Русский / Українська / 简体中文
+- `🕒 Timezone`
   - tap `Timezone`
   - reply with city, timezone code, or current time text
   - bot uses OpenAI to infer and save your timezone
+  - the saved timezone is shown as `UTC±HH:MM · City`
 - `Mark as done`
   - Delete / Archive / Keep
 - `Copy text for edits`
   - Copy note text / Do nothing
 - `🗓️ Daily task digest`
   - `Set time` (free-form text like `every day at 8am`, `21:30`, `tomorrow 7`)
+  - saving a time also enables the daily digest automatically
   - `Enable` / `Disable`
+  - in Settings, status is shown with a green/red circle only
+  - the Settings summary shows local time without a timezone suffix
   - Digest is sent once a day at the configured local user time
   - Digest includes sections:
     - `Reminders` (or `No reminders until next digest`)
@@ -246,7 +317,10 @@ Open `⚙️ Settings` to configure:
   - Status is synchronized between Settings summary and Digest detail screen
 - `🌙 Evening summary`
   - `Set time` (same free-form time parser as morning digest)
+  - saving a time also enables the evening summary automatically
   - `Enable` / `Disable`
+  - in Settings, status is shown with a green/red circle only
+  - the Settings summary shows local time without a timezone suffix
   - Evening digest includes:
     - `Tasks -> 1.1 Tasks I've completed today`
     - `Tasks -> 1.2 Tasks I've created today`
@@ -261,11 +335,13 @@ Open `⚙️ Settings` to configure:
   - messages sent within this time gap are merged into one draft
   - if the gap is `30` seconds or more (with default setting), a new draft is created
 - `📱 Show bottom menu`
-  - status is shown with a green/red circle
+  - status is shown with a green/red circle only
   - default: enabled
   - when enabled, persistent bottom keyboard is shown for this user
   - when disabled, persistent bottom keyboard is hidden for this user
   - changing this setting is silent (no system visibility notification messages)
+- `📚 No. of items`
+  - controls how many items are shown per page in list screens
 
 Contacts management is available in `More -> Contacts, Invite`:
 - view all saved assignment contacts

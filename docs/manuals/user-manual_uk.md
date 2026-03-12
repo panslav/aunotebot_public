@@ -9,6 +9,16 @@
 - Меню: `More -> Settings -> Мова`.
 - Підтримуються: English, Русский, Українська, Español, Português, Français.
 
+## 2a. AI-баланс і Telegram Stars
+- AI-функції використовують ваш баланс балів.
+- Модель за замовчуванням:
+  - `1 бал = 1 Telegram Star`
+  - `50 безкоштовних балів` під час першого запуску
+  - `5 безкоштовних балів` щодня о `00:00` у вашому локальному часовому поясі
+  - `0,1 бала = 1 AI-дія`
+- Відкрийте `More -> Points`, щоб побачити баланс, поточну вартість AI-дії, останні 5 операцій з балами, відкрити `Повну історію балів` і поповнити баланс через Telegram Stars.
+- Якщо балансу недостатньо, конкретна AI-дія блокується, але не-AI функції продовжують працювати.
+
 ## 3. Створення нотатки
 1. Надішліть текст/голос/відео/зображення.
 2. Бот створить чернетку.
@@ -65,5 +75,5 @@
 
 ## Пов’язані документи
 - Умови використання: [Legal docs repository](https://github.com/panslav/aunotebot_public/tree/main/docs/legal)
-- Схема екранів: [Screenflow](https://github.com/panslav/supernotes/blob/tasked/docs/Screenflow.md)
-- Встановлення: [Installation](https://github.com/panslav/supernotes/blob/tasked/docs/installation.md)
+- Схема екранів: [Screenflow](/docs/Screenflow.md)
+- Встановлення: [Installation](/docs/installation.md)

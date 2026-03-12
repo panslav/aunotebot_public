@@ -9,6 +9,16 @@
 - Menú: `More -> Settings -> Idioma`.
 - Idiomas: English, Русский, Українська, Español, Português, Français.
 
+## 2a. Puntos de IA y Telegram Stars
+- Las acciones con IA usan tu saldo de puntos.
+- Modelo por defecto:
+  - `1 punto = 1 Telegram Star`
+  - `50 puntos gratis` al iniciar por primera vez
+  - `5 puntos gratis` cada día a las `00:00` en tu zona horaria local
+  - `0,1 punto = 1 acción de IA`
+- Abre `More -> Points` para ver tu saldo, consultar el coste actual, revisar tus últimas 5 operaciones de puntos, abrir el `Historial completo de puntos` y recargar con Telegram Stars.
+- Si no tienes saldo suficiente, esa acción de IA se bloquea, pero las funciones no basadas en IA siguen funcionando.
+
 ## 3. Crear una nota
 1. Envía texto/voz/video/imagen.
 2. El bot crea un borrador.
@@ -65,5 +75,5 @@
 
 ## Documentos relacionados
 - Términos y condiciones: [Legal docs repository](https://github.com/panslav/aunotebot_public/tree/main/docs/legal)
-- Flujo de pantallas: [Screenflow](https://github.com/panslav/supernotes/blob/tasked/docs/Screenflow.md)
-- Instalación: [Installation](https://github.com/panslav/supernotes/blob/tasked/docs/installation.md)
+- Flujo de pantallas: [Screenflow](/docs/Screenflow.md)
+- Instalación: [Installation](/docs/installation.md)
