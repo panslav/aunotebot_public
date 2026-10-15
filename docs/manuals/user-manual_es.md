@@ -1,5 +1,13 @@
 # Manual de usuario
 
+## Versión 0.36.0.1
+
+Los adjuntos y los mensajes reenviados crean un borrador nuevo en vez de interpretarse como una fecha de recordatorio, aunque el resumen de la tarde espere respuesta. Una sugerencia de recordatorio no activa la introducción de fechas; abre Recordatorio expresamente para escribir una fecha.
+
+Las acciones Nota con IA y Tarea con IA aparecen siempre en los borradores nuevos y reabiertos, incluidos los de solo texto. El acceso a la IA y el saldo se comprueban al pulsar; el guardado normal sigue disponible.
+
+En la sugerencia de enviar o asignar una entrada a las personas mencionadas, Atrás cierra solo la sugerencia y conserva la pantalla, la página y los adjuntos anteriores. Volver a la entrada sigue siendo una acción independiente.
+
 ## Versión 0.36.0.0
 
 El bono diario se abona con la primera acción válida, no a medianoche. Crear un elemento o comentario —también al completar una tarea— exige más de 100 caracteres visibles; compartir o asignar a otra persona no exige una longitud mínima. No se repite en el mismo día local ni se recalculan saldos anteriores. Las recompensas de bienvenida y por compartir mantienen sus propias reglas.
@@ -157,9 +165,9 @@ Opción B:
 9. Opcional: envía texto solo con hashtags (ejemplo: `#work #idea`) antes de guardar para añadir etiquetas.
 10. Abre el borrador y usa:
    - fila 1: `📝 Guardar como nota`, `🟧 Guardar como tarea`
-   - fila 2: `⏰ Guardar como recordatorio` aparece cuando el texto del borrador contiene una fecha/hora reconocible
-   - fila 3: `✏️ Editar`, `❌ Cancelar`
-   - si el borrador contiene medios compatibles como imagen, audio, vídeo o PDF, aparecen acciones con IA; para imágenes, el elemento conserva primero el contenido original y después muestra el resumen con IA y el texto OCR, manteniendo las listas numeradas y con viñetas legibles
+   - fila adicional opcional: `⏰ Guardar como recordatorio` aparece cuando el texto del borrador contiene una fecha/hora reconocible
+   - acciones finales: `✏️ Editar`, `❌ Cancelar`
+   - las acciones con IA aparecen siempre, también en borradores de solo texto; para imágenes, el elemento conserva primero el contenido original y después muestra el resumen con IA y el texto OCR, manteniendo las listas numeradas y con viñetas legibles
    - el resumen con IA se formatea en tres partes cortas: introducción, parte principal y conclusión
    - `Editar` muestra solo el texto limpio del elemento para copiarlo manualmente; la fuente, el tipo localizado del elemento y el pie del bot permanecen en la plantilla y no forman parte del texto que vuelves a enviar
 11. Después de pulsar guardar, el bot muestra inmediatamente un estado de guardado y luego un mensaje de éxito con cuatro accesos directos inline: abrir el elemento creado y Notas en la primera fila, y luego Inicio y Borradores en la segunda fila.

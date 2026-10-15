@@ -1,5 +1,13 @@
 # Manual do usuário
 
+## Versão 0.36.0.1
+
+Anexos e mensagens encaminhadas criam um novo rascunho, em vez de serem interpretados como uma data de lembrete, mesmo quando o resumo da noite aguarda resposta. Uma sugestão de lembrete não ativa a digitação de datas; abra Lembrete explicitamente para digitar uma data.
+
+As ações Nota com IA e Tarefa com IA aparecem sempre em rascunhos novos e reabertos, inclusive os de texto puro. O acesso à IA e o saldo são verificados ao tocar; o salvamento comum continua disponível.
+
+Na sugestão de enviar ou atribuir um registro às pessoas mencionadas, Voltar fecha apenas a sugestão, mantendo a tela, a página e os anexos anteriores. Voltar ao registro continua sendo uma ação separada.
+
 ## Versão 0.36.0.0
 
 O bônus diário é creditado na primeira ação válida, não à meia-noite. Um novo item ou comentário, inclusive ao concluir uma tarefa, deve ter mais de 100 caracteres visíveis; compartilhar ou atribuir a outra pessoa não exige tamanho mínimo. O bônus não se repete no mesmo dia local nem recalcula saldos anteriores. As recompensas de boas-vindas e de compartilhamento mantêm suas regras.
@@ -157,9 +165,9 @@ Opção B:
 9. Opcional: envie texto apenas com hashtags (exemplo: `#work #idea`) antes de salvar para adicionar tags.
 10. Abra o rascunho e use:
    - linha 1: `📝 Salvar como nota`, `🟧 Salvar como tarefa`
-   - linha 2: `⏰ Salvar como lembrete` aparece quando o texto do rascunho contém uma data/hora reconhecível
-   - linha 3: `✏️ Editar`, `❌ Cancelar`
-   - se o rascunho contiver mídia compatível como imagem, áudio, vídeo ou PDF, aparecem ações com IA; para imagens, o item mantém primeiro o conteúdo original e depois mostra o resumo de IA e o texto OCR, preservando listas numeradas e com marcadores legíveis
+   - linha adicional opcional: `⏰ Salvar como lembrete` aparece quando o texto do rascunho contém uma data/hora reconhecível
+   - ações finais: `✏️ Editar`, `❌ Cancelar`
+   - as ações com IA aparecem sempre, inclusive em rascunhos de texto puro; para imagens, o item mantém primeiro o conteúdo original e depois mostra o resumo de IA e o texto OCR, preservando listas numeradas e com marcadores legíveis
    - o resumo com IA é formatado em três partes curtas: introdução, parte principal e conclusão
    - `Editar` mostra apenas o texto limpo do item para cópia manual; fonte, tipo localizado do item e rodapé do bot continuam no modelo
 11. Depois de tocar em salvar, o bot mostra imediatamente um status de salvamento e depois uma mensagem de sucesso com quatro atalhos inline: abrir o item criado e Notas na primeira linha, e depois Início e Rascunhos na segunda linha.

@@ -1,5 +1,13 @@
 # Manuel utilisateur
 
+## Version 0.36.0.1
+
+Les pièces jointes et messages transférés créent un nouveau brouillon au lieu d’être interprétés comme une date de rappel, même si le récapitulatif du soir attend une réponse. Une suggestion de rappel n’active pas la saisie d’une date ; ouvrez explicitement Rappel pour en saisir une.
+
+Les actions Note avec IA et Tâche avec IA sont toujours affichées dans les brouillons nouveaux ou rouverts, y compris ceux contenant uniquement du texte. L’accès à l’IA et le solde sont vérifiés au clic ; l’enregistrement normal reste disponible.
+
+Dans la suggestion d’envoyer ou d’attribuer une entrée aux personnes mentionnées, Retour ferme uniquement la suggestion et conserve l’écran, la page et les pièces jointes précédents. Revenir à l’entrée reste une action distincte.
+
 ## Version 0.36.0.0
 
 Le bonus quotidien est crédité à la première action admissible, pas à minuit. Un nouvel élément ou commentaire, y compris à la clôture d’une tâche, doit dépasser 100 caractères visibles ; partager ou attribuer à autrui n’exige pas de longueur minimale. Pas de second bonus le même jour local ni de recalcul des anciens soldes. Les récompenses d’accueil et de partage restent distinctes.
@@ -157,9 +165,9 @@ Option B :
 9. Optionnel : envoyez un texte contenant uniquement des hashtags (exemple : `#work #idea`) avant d'enregistrer pour ajouter des tags.
 10. Ouvrez le brouillon et utilisez :
    - ligne 1 : `📝 Enregistrer comme note`, `🟧 Enregistrer comme tâche`
-   - ligne 2 : `⏰ Enregistrer comme rappel` apparaît quand le texte du brouillon contient une date/heure reconnaissable
-   - ligne 3 : `✏️ Modifier`, `❌ Annuler`
-   - si le brouillon contient un média pris en charge comme une image, un audio, une vidéo ou un PDF, des actions IA apparaissent ; pour les images, l’élément conserve d’abord le contenu d’origine, puis affiche le résumé IA et le texte OCR en préservant les listes numérotées et à puces lisibles
+   - ligne supplémentaire facultative : `⏰ Enregistrer comme rappel` apparaît quand le texte du brouillon contient une date/heure reconnaissable
+   - actions finales : `✏️ Modifier`, `❌ Annuler`
+   - les actions IA sont toujours affichées, y compris pour les brouillons contenant uniquement du texte ; pour les images, l’élément conserve d’abord le contenu d’origine, puis affiche le résumé IA et le texte OCR en préservant les listes numérotées et à puces lisibles
    - le résumé IA est formaté en trois courtes parties : introduction, partie principale et conclusion
    - `Modifier` n’affiche que le texte propre de l’élément à copier manuellement ; la source, le type localisé et le pied du bot restent dans le modèle
 11. Après l'appui sur enregistrer, le bot affiche immédiatement un état d'enregistrement, puis un message de succès avec quatre raccourcis inline : ouvrir l'élément créé et Notes sur la première ligne, puis Accueil et Brouillons sur la deuxième ligne.

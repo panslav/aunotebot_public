@@ -1,5 +1,13 @@
 # User Guide
 
+## Release 0.36.0.1
+
+Attachments and forwarded messages start a new capture rather than being treated as a reminder date, even while an evening digest awaits a reply. A suggested reminder does not activate date entry; open Reminder explicitly to type a date.
+
+AI Note and AI Task actions are always shown for new and reopened drafts, including text-only drafts. AI access and balance checks still run when you choose an AI action; ordinary save actions remain available.
+
+When mentioned people trigger a share/assign suggestion, Back dismisses that suggestion and leaves the previous screen, page and attachments unchanged. Back to item remains a separate action.
+
 ## Release 0.36.0.0
 
 The daily activity bonus is credited at the first qualifying action, not at midnight. The threshold is strictly more than 100 visible characters for a newly created item or comment, including a task-completion comment. Sharing or assigning to another person qualifies without a text-length threshold. Repeated actions on the same local day do not repeat the daily bonus; previous balances are not recalculated. Existing onboarding and per-share rewards remain separate.
@@ -160,9 +168,9 @@ Option B:
 11. Optional: send hashtag-only text (example: `#work #idea`) before saving to add tags.
 12. Open the draft and use:
    - row 1: `📝 Save as Note`, `🟧 Save as Task`
-   - row 2: `⏰ Save as Reminder` appears when the draft text contains a recognizable date/time
-   - row 3: `✏️ Edit`, `❌ Cancel`
-   - if the draft contains supported media such as image, audio, video, or PDF, AI-save actions appear; for images, the item keeps the original content first, then shows the AI summary and OCR text, preserving readable numbered and bulleted lists
+   - optional extra row: `⏰ Save as Reminder` appears when the draft text contains a recognizable date/time
+   - final actions: `✏️ Edit`, `❌ Cancel`
+   - AI-save actions always appear, including for text-only drafts; for images, the item keeps the original content first, then shows the AI summary and OCR text, preserving readable numbered and bulleted lists
    - the AI summary is formatted into three short parts: introduction, main part, and conclusion
    - `Edit` shows only the clean item text for manual copying; source lines, localized item labels, and bot footer stay templated and are not part of the text you resend
 11. After you tap save, the bot immediately shows a saving status, then shows a success message with four inline shortcuts: open the created item and the corresponding list on the first row, then Start and Drafts on the second row.
