@@ -1,5 +1,27 @@
 # User Guide
 
+## Release 0.36.0.0
+
+The daily activity bonus is credited at the first qualifying action, not at midnight. The threshold is strictly more than 100 visible characters for a newly created item or comment, including a task-completion comment. Sharing or assigning to another person qualifies without a text-length threshold. Repeated actions on the same local day do not repeat the daily bonus; previous balances are not recalculated. Existing onboarding and per-share rewards remain separate.
+
+Search returns every matching item, ranked by relevance, using the standard page controls. Back from an item restores the same query and page without charging for another AI search summary.
+
+AAC audio is prepared locally in an M4A container without re-encoding before AI transcription. The original attachment is unchanged. An attachment-only Markdown document draft shows a readable description and document count, not a generated sender title or an internal translation key.
+
+Unresolved draft actions remain on the primary draft card until you use them. Opening another draft or navigating does not remove those actions. Saving, closing or deleting an item removes its bot-displayed attachment copies, including files still being sent; your original incoming messages are retained.
+
+Web source attribution is deduplicated without removing ordinary body links. Forwarded message segments show author: message; the author links to the original post when Telegram supplies a message link. Private or hidden forwards may not expose that link. Formatting and multiple links within numbered paragraphs are preserved. Existing stored drafts are not bulk-rewritten.
+
+## Release 0.35.0.9
+
+Setting reminders returns to one Tasks screen without duplicate lists. Closing an item removes its displayed attachments; reopening the same item reuses files already shown.
+
+Search result IDs link to the corresponding item and result lines use its header icon.
+
+Merged forwards preserve the sender for each message segment. AI analysis produces one combined summary of the item text, OCR and supported attachment content, including visual information. Paragraph and list boundaries are preserved.
+
+Telegram controls file downloading on your device; a blurred media preview can remain while the client downloads it. Unsupported or oversized files cannot be fully analysed.
+
 This guide explains how to use AUNotebot from Telegram.
 
 Maintenance note (v0.25 audio limit clarification): Telegram-uploaded audio is enforced at the Telegram Bot API download limit on this bot.
@@ -10,24 +32,29 @@ Maintenance note (v0.25 audio limit clarification): Telegram-uploaded audio is e
 3. `/start` always reloads and reapplies your saved settings (especially Language and bottom-menu visibility).
 4. You will see:
    - welcome message:
-     - `Welcome to the AUNotebot.`
-     - `Take your notes where your life is!`
+     - `Welcome to the Telenota bot.`
+     -
      - `📝🗣️🎥🌃➡️🧠✅`
-     - `📝 Capture your ideas, thoughts, and tasks.`
-     - `🛡️ Never forget anything anymore.`
-     - `1️⃣  Text me, voice me, send me an image, a circle or a full-sized video.`
-     - `2️⃣  I will save it and create a note or a task. My AI brain will analyse it and summarise your note.`
-     - `3️⃣ Keep a note, or make it assignable task!`
-     - `⚖️ By using the bot you agree with the Terms & Conditions (click More -> Legal).`
-     - `❓ Click More -> Help for a user manual.`
-     - `✉️ Ideas or feedback: @aunotebot_support`
+     - `Take notes where life happens!`
+     - `Capture ideas, thoughts, and tasks, and never forget anything again.`
+     -
+     - `1️⃣ Write to me, send a voice message, image, video note, or regular video.`
+     - `2️⃣ I will save it and create a note or task. My AI will analyze it and create a short summary.`
+     - `3️⃣ Leave it as a note or turn it into a task so you can share it or set a reminder.`
+     -
+     - `⚖️ By using the bot, you agree to the Terms of Use (click More -> Legal).`
+     - `❓ Click More -> Help to open the user guide.`
+     - `✉️ Ideas or feedback: @telenota_chat.`
    - current version on the last line of the welcome message
    - inline counters + shortcuts:
-     - row 1: `Find`
-     - row 2: `Tasks`, `Notes`
-     - row 3: `Reminders`, `Drafts`
-     - row 4: `More`
+     - row 1: `Notes`, `Tasks`
+     - row 2: `Drafts`, `Reminders`
+     - row 3: `Find`, `More`
+     - row 5: optional `Follow Telenota updates` button in your current UI language
    - command menu (Telegram burger menu) with shortcuts
+5. Opening `/start` or any list hides older visible list/home screens so only the requested screen remains visible.
+6. Lists opened from shortcuts show a compact title above the buttons instead of an empty placeholder message.
+7. If an updates channel URL is configured for your UI language, `/start` also shows a soft CTA button for Telenota news, tips, and examples in that language. Following it is optional and does not affect bot usage.
 
 Public Terms documents:
 - [Legal docs repository](https://github.com/panslav/aunotebot_public/tree/main/docs/legal)
@@ -47,40 +74,41 @@ Public User Manuals:
 2. Default fallback is English.
 3. To change language manually:
    - open `More -> Settings -> Language`
-   - choose one of, in this order: `English`, `Español`, `Français`, `Português`, `Русский`, `Українська`, `简体中文`
+   - choose one of, in this order: `English`, `Español`, `Français`, `Português`, `Русский`, `Українська`, `简体中文`, `العربية`
 4. All core UI labels/buttons are translated after selection.
 
-## 2a. Country
-1. Open `More -> Settings -> Country`.
-2. Select your country from the paginated list with flags.
-3. The bot does not fill this value automatically; only your explicit selection sets it.
-4. The country is required for tax and billing compliance before using AI features.
-
-## 2b. AI Points and Telegram Stars
+## 2a. AI Points and Telegram Stars
 1. AI-powered actions use your points balance.
 2. Default billing model:
    - `1 point = 1 Telegram Star`
-   - `50 free Points` once when you first start using the bot
-   - `5 free Points` every day at `00:00` in your local bot timezone
+   - `10 free Points` once when you first start using the bot
+   - `0.50 free Points` once per active local day, credited on the first qualifying action: create an item or comment with more than 100 visible characters, or successfully share/assign an item to another user. Inactive days earn nothing; viewing, editing and receiving copies do not qualify.
+   - no automatic Points reward for creating notes/tasks
    - `1.5 points / minute` for text-to-voice
    - `0.25 points / minute` for audio parsing
+   - `1 point / minute` for turning audio/video already attached to a saved item into text
    - `0.1 point` per image OCR
    - `0.05 point` per text/link analysis
-3. Open `More -> Points` to:
+3. For saved-media `🤖 Analyze with AI`, the bot reads the duration stored with the Telegram attachment and bills proportionally by seconds at `1 point / minute`.
+   - Example: `125 seconds` costs `2.09 points`.
+   - The charge is rounded up to the nearest `0.01 point`.
+   - If an older saved attachment has no stored duration, the bot treats it as `60 seconds`.
+   - If your balance is too low, transcription does not start and your existing note/task is unchanged.
+4. Open `More -> Points` to:
    - see your current balance
    - see your last 5 Points operations
    - open `Full Points history`
    - see current AI pricing
    - top up with Telegram Stars
-4. You must set `Country` before using AI functionality or buying points.
-5. `More -> Settings` also includes a danger-zone option to delete your AUNotebot account data.
-6. Deleting all data permanently removes your bot-owned notes, tasks, drafts, reminders, contacts, settings, Points history, and linked account records.
-7. When you buy Points inside the bot, Telegram Stars top-ups are priced directly in `XTR`.
-8. If your balance is too low:
+5. You can share your own phone number in `More -> Settings -> Contacts -> Share my phone`.
+6. `More -> Settings` also includes a danger-zone option to delete your AUNotebot account data.
+7. Deleting all data permanently removes your bot-owned notes, tasks, drafts, reminders, contacts, settings, Points history, and linked account records.
+8. When you buy Points inside the bot, Telegram Stars top-ups are priced directly in `XTR`.
+9. If your balance is too low:
    - AI functionality is blocked for that action
    - bot shows a notification
    - non-AI functionality continues to work
-9. Typical AI-paid actions include:
+10. Typical AI-paid actions include:
    - summaries and tags
    - recall/find answer generation
    - translation
@@ -112,29 +140,62 @@ Option B:
    - `💬 Forwarded with the comment:`
    - `<your text>`
    before the source/footer line.
-4. In note/task view, forwarded source is shown as full URL:
-   - `Source: https://...`
-5. Optional: send hashtag-only text (example: `#work #idea`) before saving to add tags.
-6. Open the draft and use:
+4. In note/task view, public Telegram user sources are shown as clickable `@handle` links instead of raw `https://t.me/...` URLs, a single blank line is kept before the final `Saved via Telenota (...)` footer, and that footer also includes a clickable `your message` link back to the exact bot message that created the item when Telegram still exposes it.
+5. If a forwarded message contains one or more web links, bot first uses each page's available preview metadata, and when that is unavailable it tries a safe deterministic title fallback from page metadata (`og:title`, `twitter:title`, or HTML `<title>`).
+   - Redirect-based Google Maps links can resolve to the final page title when the destination page exposes one.
+   - If no safe title can be extracted, bot keeps the existing saved-with-source fallback instead of showing a fake source or raw error.
+   - In merged forwards, the background link-summary update replaces only the pending link block and keeps the other forwarded messages.
+6. Telegram formatting from forwarded text is preserved in saved notes/tasks when Telegram exposes it to the bot:
+   - bold, italic-style Markdown, links, and quoted blocks are rendered in the final item view.
+   - links keep their full target URL, including query parameters such as `?g_st=...` or `&foo=...`.
+7. If no separate comment is added after forwarding, bot stores an explicit `Forwarded without comments` marker; if a comment is sent right after forwarding, only that comment is stored in the comment block.
+8. Telegram media attached to the forwarded message is saved with the draft and shown with the saved note/task. If several attachments have a saved source link, the item view shows them as compact comma-separated source links grouped by media type:
+   - photos/images remain attached when Telegram provides them as downloadable bot media.
+   - link preview images generated only by Telegram clients may not be downloadable through Bot API; send/forward the actual photo if you need guaranteed image retention.
+   - if Telegram exposes a forwarded video/animation together with a client preview photo, bot keeps the real video/animation attachment and suppresses the duplicated preview image.
+   - if Telegram only reports an oversized forwarded media file during AI-save, the bot saves the original draft without AI media analysis instead of showing a generic error.
+   - consecutive photos and videos in the same Telegram album are kept in their original order and shown together where Telegram supports albums.
+9. Forwarded polls are saved as a text snapshot of the question, options, and available vote counts. A public source link is retained only when Telegram provides one. If an open poll has no available results, Telenota adds a comment explaining that voting in the original poll is needed to preserve them.
+10. For explicitly written address lines in direct or forwarded content, Telenota can offer exact OpenStreetMap location matches. Confirming the offer adds every selected place as a separate location comment after you save the note/task. Only clear address candidates are sent to OpenStreetMap; if a location cannot be determined precisely, no location is added.
+11. Optional: send hashtag-only text (example: `#work #idea`) before saving to add tags.
+12. Open the draft and use:
    - row 1: `📝 Save as Note`, `🟧 Save as Task`
    - row 2: `⏰ Save as Reminder` appears when the draft text contains a recognizable date/time
    - row 3: `✏️ Edit`, `❌ Cancel`
-7. If all drafts are consumed/saved, opening `Drafts` returns you to the Home chooser.
+   - if the draft contains supported media such as image, audio, video, or PDF, AI-save actions appear; for images, the item keeps the original content first, then shows the AI summary and OCR text, preserving readable numbered and bulleted lists
+   - the AI summary is formatted into three short parts: introduction, main part, and conclusion
+   - `Edit` shows only the clean item text for manual copying; source lines, localized item labels, and bot footer stay templated and are not part of the text you resend
+11. After you tap save, the bot immediately shows a saving status, then shows a success message with four inline shortcuts: open the created item and the corresponding list on the first row, then Start and Drafts on the second row.
+12. If all drafts are consumed/saved, opening `Drafts` returns you to the Home chooser.
+
+New drafts receive a concise AI-generated title in your selected interface language. Video AI analysis describes visible frames, including readable dates, before adding audio transcription when available.
 
 ## 6. Voice and Video
-1. Send a voice message, audio file, video, or video note.
-2. Bot immediately shows a processing status message when parsing audio/video starts.
-3. Bot transcribes and prepares a draft.
-4. Tap `📝 Save as Note` or `🟧 Save as Task`.
-5. If the draft contains a recognizable date/time, you can tap `⏰ Save as Reminder`.
+1. Send a voice message, audio file (including `.m4a` when Telegram sends it as audio or an audio document), video, or video note.
+2. For voice and audio files, bot immediately shows a processing status message when parsing starts.
+3. For regular videos, video notes, and video documents, bot first saves the incoming media as a draft; AI parsing starts only when you choose `Note with AI` or `Task with AI`.
+4. When AI parsing runs, bot transcribes and prepares the draft/item text. Audio/video transcripts include timestamps at the end of each transcript paragraph when timing data is available.
+   - If transcription fails, bot shows `Try again`; tap it to retry the same Telegram file without uploading it again.
+5. Tap `📝 Save as Note` or `🟧 Save as Task`.
+   - After save, bot shows a success message with four inline shortcuts: open the created item and the corresponding list on the first row, then Start and Drafts on the second row.
+6. If the draft contains a recognizable date/time, you can tap `⏰ Save as Reminder`.
    - This saves the draft as a task and schedules the reminder immediately.
-6. Telegram voice, audio, and video files larger than `20 MB` are rejected before processing because Telegram Bot API does not let this bot download larger uploads on this bot runtime.
-7. If your recording or video is larger than `20 MB`, split or compress it manually and send the smaller parts one by one.
+7. If a draft combines multiple forwarded/caption messages or AI media analysis, the saved note/task separates sections with visible horizontal dividers. Formatting in the original text and generated content is preserved where Telegram exposes it to the bot.
+8. Telegram voice, audio, and video files larger than `20 MB` are rejected before processing because Telegram Bot API does not let this bot download larger uploads on this bot runtime.
+9. If your recording or video is larger than `20 MB`, split or compress it manually and send the smaller parts one by one.
+10. Temporary error messages are removed automatically when you send the next message, tap the next bot button, or after 30 seconds.
+11. Recoverable Telegram, AI, and timeout failures show a stable error code such as `E-TIMEOUT-001`. Forward that message to `@telenota_chat` when asking support for help; the code does not expose your content.
 
 ## 7. Images and Screenshots
 1. Send or forward an image/screenshot.
 2. Bot runs OCR and summarizes key visible text/content.
 3. A draft is created; then save as Note or Task.
+4. If you send a text-based PDF document and choose an AI save action, bot keeps the original draft content, appends the extracted PDF text, and then appends a brief AI summary up to `300` words in your selected UI language.
+5. Extracted text is kept in readable paragraphs, and the AI summary is rendered as introduction, main part, and conclusion.
+6. Scanned or image-only PDFs may fail AI analysis until OCR-for-PDF support is added.
+7. If you save a PDF without AI, the draft/item keeps a plain `PDF <filename>` line. If you later open the saved item and tap `AI analysis`, the same PDF summary flow runs there too.
+8. Telegram Bot API does not provide Story media to bots. The bot saves the Story reference and asks you to send the next screenshot, photo, or downloaded video; it attaches that file to the same Story draft.
+9. For an AI image analysis, the saved item shows the AI summary before the recognised OCR text. Numbered and bulleted lists in the image remain numbered or bulleted.
 
 ## 8. Browse Notes and Tasks
 - Use Telegram command menu (burger):
@@ -148,6 +209,8 @@ Option B:
 - If bottom menu is enabled (`More -> Settings -> Show bottom menu`):
   - row 1: `📝 Notes` + new line + `(N)`, `⏰ Reminders` + new line + `(N)`, `🟧 Tasks` + new line + `(N)`
   - row 2: `🗂️ Drafts` + new line + `(N)`, `🔎 Find`, `📚 More`
+- List headers such as `📝 Notes` and `🗂️ Drafts` are rendered on one visible line without hidden spacer padding.
+- When you open a task from page 2+ and then mark it done, delete it, convert it, or set a reminder, bot returns to the same task-list page when showing the list again.
   - when enabled, the bottom menu stays visible until the user disables it in settings
   - These open the same screens as the burger-menu actions.
 - Or use inline counters on start screen:
@@ -172,11 +235,16 @@ Option B:
 6. If your Find query is an exact item ID (for example `219` or `#219`) and this item exists, it is pinned as result #1.
 7. To leave Find mode, tap `⬅️ Back`.
 8. `⬅️ Back` returns you to the screen you had before Find mode.
+9. If the optional AI summary is unavailable, local matching and result buttons remain available with a neutral fallback summary.
 
 ## 9a. Reminder Suggestions
 1. If a newly created note or task contains a likely date/time phrase, the bot proposes a reminder automatically.
-2. If the item is still a regular note and you choose `Set reminder`, the bot first converts it into a task, then schedules the reminder.
-3. After reminder creation, the bot confirms the reminder time in your language.
+2. If only a date is detected, the bot offers `Morning`, `Noon`, `Evening`, plus `Set reminder` and `Skip`.
+3. While this prompt is open, you can type a custom date/time immediately; there is no separate `Set manually` button.
+4. If only a time is detected, the bot assumes today's date unless you type a different date.
+5. If the item is still a regular note and you choose `Set reminder`, the bot first converts it into a task, then schedules the reminder.
+6. After reminder creation, the bot confirms the reminder time in your language.
+7. If reminder setup is opened from a media callback, the bot uses a safe edit fallback and still shows the reminder prompt.
 
 ## 10. Note and Task Actions
 
@@ -187,11 +255,10 @@ Option B:
 - `📚 More`
 - `⬅️ Back`
 - `📚 More` opens:
-  - `🏷️ Tags`
-  - `🔊 Make Voice`
-  - `🔀 Merge`
-  - `📤 Share`
-  - `📌 Pin` / `📌 Unpin`
+  - row 1: `🤖 Analyze with AI`, `🔊 Make Voice`
+  - row 2: `🔀 Merge`, `📤 Share`
+  - row 3: `📌 Pin` / `📌 Unpin`, `🏷️ Tags`
+  - row 4: `⬅️ Back`
 
 ### Task actions
 - `✏️ Edit`
@@ -202,11 +269,10 @@ Option B:
 - `📚 More`
 - `⬅️ Back`
 - `📚 More` opens:
-  - `🏷️ Tags`
-  - `🔊 Make Voice`
-  - `🔀 Merge`
-  - `👥 Assign` or `👥 Re-assign`
-  - `📌 Pin` / `📌 Unpin`
+  - row 1: `🤖 Analyze with AI`, `🔊 Make Voice`
+  - row 2: `🔀 Merge`, `👥 Assign` or `👥 Re-assign`
+  - row 3: `📌 Pin` / `📌 Unpin`, `🏷️ Tags`
+  - row 4: `⬅️ Back`
 
 ### Task assignment with Contacts
 1. Open a task.
@@ -216,7 +282,8 @@ Option B:
    - manual input option (`@handle` or phone)
 4. If you type a new valid `@handle`/phone, it is saved to your Contacts automatically.
 5. If recipient has already started the bot, assignment is sent and task is linked to that user.
-6. You can use `↩️ Unassign` from the assignment picker to remove the current assignment.
+6. If recipient has not started the bot and you selected an `@handle`, the bot creates a separate invite message with the link hidden under “Telenota”. Send that message to the recipient: when they start the bot with that link, the task is delivered automatically if their Telegram handle matches. If another account opens the link, the bot asks you to approve or decline access.
+7. You can use `↩️ Unassign` from the assignment picker to remove the current assignment.
 
 ### Note sharing with Contacts
 1. Open a regular note.
@@ -226,12 +293,26 @@ Option B:
    - manual input option (`@handle` or phone)
 4. If you type a new valid `@handle`/phone, it is saved to your Contacts automatically.
 5. If recipient has already started the bot, the note is shared and delivered in their chat (including attachments).
+6. If recipient has not started the bot and you selected an `@handle`, the bot creates a separate invite message with the link hidden under “Telenota”. Send it to the recipient: when they start the bot with that link, the note is delivered automatically if their Telegram handle matches. If another account opens the link, the bot asks you to approve or decline access.
 
 ### Make voice (Text-to-speech)
 1. Open any note or task.
 2. Tap `🔊 Make Voice`.
 3. Bot immediately shows a system notification that text-to-voice generation has started.
 4. Bot generates a voice message using OpenAI (`onyx` voice), sends it to chat, and attaches it to that item.
+
+### Media to text
+1. Open any note or task.
+2. Open `📚 More`.
+3. Tap `🤖 Analyze with AI`.
+4. The same button also works for plain text items and image attachments, not only for audio/video/PDF.
+5. Bot calculates the cost according to the actual analysis path:
+   - text/link-style AI enrichment uses the text analysis rate
+   - saved images use the image-analysis rate
+   - saved audio/video uses the stored Telegram media duration at `1 point / minute`, rounded up to the nearest `0.01 point`
+6. If your balance is sufficient, the bot reserves the required Points, runs the AI analysis, updates the item, and finalizes the charge only after successful processing.
+   - Appended audio/video transcripts include timestamps at the end of each transcript paragraph when timing data is available.
+7. If AI analysis fails, the reserved Points are released and the item remains unchanged.
 
 ## 11. Merge Items (Note/Task)
 1. Open an item.
@@ -240,6 +321,7 @@ Option B:
 4. Select target item, or send target item ID as text.
 5. Source item text is appended to target item text.
 6. Source item is removed, and target item is opened.
+7. The merge success notice appears inside the opened target item screen, not as a separate chat message.
 
 ## 11.1 Pin items
 1. Open a note or task.
@@ -257,8 +339,9 @@ Option B:
 ## 13. Edit a Note
 1. Open note/task.
 2. Tap `✏️ Edit`.
-3. Follow prompt and send full updated text.
-4. Bot saves edit and adds `last edit` timestamp in footer.
+3. Copy only the clean body text shown in the prompt, edit it, and send the full updated text back.
+4. Source lines, localized item type labels, and the `Saved via Telenota` footer are re-applied by the bot template and should not be typed manually.
+5. Bot saves edit and adds `last edit` timestamp in footer.
 
 ## 14. Remove or Archive
 1. Open note/task.
@@ -267,13 +350,17 @@ Option B:
    - `🗑️ Delete`
    - `🗄️ Archive`
    - `⬅️ Back`
-4. If the note/task had media attachments shown in chat, those attachment messages are removed from the screen after delete/archive.
+4. If you choose `🗄️ Archive`, the bot asks for an optional archivation comment.
+5. Send the comment, or tap `✅ No comments`.
+6. The bot appends the line `Archivation comment: <comment>` at the bottom of the item, then archives it.
+7. If the note/task had media attachments shown in chat, those attachment messages are removed from the screen after delete/archive.
 
 ## 15. Task Done and Comments
 1. Open task.
 2. Tap `✅ Done`.
 3. Enter optional comment or tap `✅ No comments`.
-4. Result follows your Settings:
+4. Any attachment messages currently shown for that task are removed from the chat while the done prompt/list is shown; the saved attachments remain on the item.
+5. Result follows your Settings:
    - Delete
    - Archive
    - Keep
@@ -288,10 +375,8 @@ Option B:
 
 ## 17. Settings
 Open `⚙️ Settings` to configure:
-- `🌍 Country` (first item)
-  - required for tax and billing compliance before AI eligibility
-- `🌐 Language` (second item)
-  - English / Español / Français / Português / Русский / Українська / 简体中文
+- `🌐 Language` (first item)
+  - English / Español / Français / Português / Русский / Українська / 简体中文 / العربية
 - `🕒 Timezone`
   - tap `Timezone`
   - reply with city, timezone code, or current time text
@@ -322,8 +407,8 @@ Open `⚙️ Settings` to configure:
   - in Settings, status is shown with a green/red circle only
   - the Settings summary shows local time without a timezone suffix
   - Evening digest includes:
-    - `Tasks -> 1.1 Tasks I've completed today`
-    - `Tasks -> 1.2 Tasks I've created today`
+    - `Tasks -> Tasks I've completed today`
+    - `Tasks -> Tasks I've created today`
     - `Notes I've added today`
   - After the digest, bot asks:
     - `And how do YOU feel your day was today?`
@@ -343,9 +428,10 @@ Open `⚙️ Settings` to configure:
 - `📚 No. of items`
   - controls how many items are shown per page in list screens
 
-Contacts management is available in `More -> Contacts, Invite`:
+Contacts management is available in `More -> Settings -> Contacts`:
 - view all saved assignment contacts
 - `➕ Add contact` (enter `@handle` or phone)
+- `📱 Share my phone` (share your own Telegram contact with the bot)
 - open contact -> `Edit` / `Delete`
 - edit updates the contact value used in assignment suggestions
 
@@ -371,7 +457,64 @@ When reporting a bug, include:
 - whether `/start` still works while other buttons fail
 
 ## Related Docs
-- Terms & Conditions: [Legal docs repository](https://github.com/panslav/aunotebot_public/tree/main/docs/legal)
+- Terms of Use: [Legal docs repository](https://github.com/panslav/aunotebot_public/tree/main/docs/legal)
 - Screenflow: [Screenflow](/docs/Screenflow.md)
 - Installation: [Installation](/docs/installation.md)
 - Documentation index: [Docs Home](/docs/README.md)
+
+## 21. Sharing and Source Updates
+- `More -> Share` now works for both notes and tasks.
+- In the share picker, you can choose a saved contact or tap `Public share` to create a forwardable message with a bot start link.
+- Long public-share items are split into several forwardable messages; each message ends with the regular `Saved via Telenota (<local date/time>)` footer.
+- If someone starts the bot for the first time from your referral link or from your private share-invite link, you receive a persistent bot notification that they joined.
+- When Telegram provides enough metadata, `Source` opens the exact original Telegram message.
+- Drafts, notes, and tasks show the saved date/time in your timezone.
+
+## Guided start and AI Drafts
+- On first start, complete three useful actions and receive the welcome bonus as `+2`, `+3`, and `+5` Points.
+- `AI Note` and `AI Task` keep your original text, convert every supported attachment to text in order, and add a readable three-paragraph summary.
+- Extracted attachments are labelled by type and original order; the full extracted text is kept before the summary.
+- Mentions never assign or share automatically: Telenota asks you to choose the action.
+- Use `Back` to retrace your screen history and `Start` to return directly to the home screen.
+- If an item needs several Telegram messages, its buttons appear under the final message.
+
+## Latest updates (0.35.2)
+- Consecutive photo/video attachments from one captured burst are now shown as Telegram albums when Telegram supports album delivery.
+- Draft previews keep grouped attachment counters and the original text together more consistently, without repeating the same merged segment multiple times.
+- Saved items and drafts now render footer metadata more compactly: author and source are shown on one localized line, and the saved timestamp is shown as local date/time only.
+- Opening a heavy note/draft no longer needs to wait for every attachment before the main card becomes usable; media continues loading in the background.
+- Contacts, Topics, and Points History screens now keep explicit `Back` / `Start` navigation rows, and large page pickers navigate in windows instead of a single huge grid.
+- Points History lines can now show the related Note/Task label and an item deep link when the balance movement is tied to a saved item that still exists.
+
+## Latest updates (0.36)
+- Notes and tasks now support comments. Open an item and tap `Comments (N)` to view existing comments as separate Telegram messages with `Save` / `❌ Delete` actions and a `Back` action to the source item. Telegram formatting is preserved when Telegram exposes the entities.
+- When comment mode is active, the next sent or forwarded text/media message is first shown as a staged preview with `Comment`, `Create draft`, `Back`, and `Start`; only after confirmation is it saved below the item as `Comment N`.
+- Drafts and saved items keep forwarded service lines compact: `Forwarded without comments`, author/source, and saved timestamp stay together without extra blank lines.
+- Draft previews show attachment counters near the end of the card, just above forwarded/source metadata, and keep Telegram-style formatting where possible.
+- Running `AI analysis` on an already saved note/task now appends the generated result below the existing body under `AI analysis results:` instead of replacing your saved content.
+- Marking a task as done now cancels its scheduled reminders, and reminder suggestions use your saved interface language for localized month/day markers.
+- `More` no longer includes a duplicate `Settings` button; open Settings from the Start screen.
+- `Points` includes a direct link to the public points documentation, and Russian AI ledger labels now say `Использование ИИ` and `Отменено списание баллов за использование ИИ`.
+- `Merge` suggestions now prioritise same-tag items without AI; semantic AI ranking is intentionally not enabled by default because it would add extra AI cost and latency.
+
+## Latest updates (0.36.2.phase4-5)
+- Draft previews can show a red/green translation toggle before save. Red keeps the original language; green translates the draft into your selected interface language when saving a regular note or task.
+- AI-generated note/task summaries now use your selected interface language even when the source text is different.
+- Quick consecutive forwards are merged in arrival order.
+- Merge prompts opened from media-backed messages now fall back safely instead of showing a Telegram edit error.
+
+## Latest updates (0.36.4)
+- Comment messages preserve Telegram formatting and use `Save`, `❌ Delete`, and `Back`; returning or deleting also removes the stale comments screen.
+- Poll snapshots show option and total vote counts only when Telegram provides them. Otherwise Telenota explicitly marks the results as unknown and never invents zero votes.
+- Clear address lines are detected in both direct and forwarded messages, including multilingual street abbreviations. Only the extracted address candidate is sent to OpenStreetMap, and ambiguous matches are not added.
+
+## Release 0.35.0.4
+- AI titles use the available text, link summary, and supported attachment analysis. A draft containing only an attachment keeps a media-type title until analysis is requested.
+- Saved-item AI analysis combines the current item text with text extracted from every supported attachment before appending its result.
+- In merged forwards, each message segment shows its author before the segment text. Reminder suggestion cards disappear after either action; `Skip` only skips the reminder.
+
+## Release 0.35.0.5
+- Merged forwarded messages show each author before that segment's text.
+- AI summaries appear before OCR or extracted attachment text.
+- Settings uses a compact localised heading; inline-button alignment is controlled by Telegram.
+- Only an explicit reply to the evening-reflection prompt is captured as reflection content. A standalone text, link, or attachment after the digest creates a normal draft and is never consumed by a stale input mode.
