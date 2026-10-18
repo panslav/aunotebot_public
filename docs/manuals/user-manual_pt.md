@@ -1,8 +1,14 @@
 # Manual do usuário
 
+## Versão 0.37.0.1
+
+Os botões do calendário agora respondem corretamente e não mostram o preço. Se o envio do ICS não for confirmado, o bot oferece um link separado do Google Agenda na mesma exportação de 0,10 ponto. Endereços como `av. Aragon nº4-bis` preservam o número do imóvel; telefone e e-mail ficam fora da consulta. Não é necessário conectar uma conta do Google.
+
 ## Versão 0.37.0.0
 
-A exportação para o calendário aparece no registro quando uma data ou horário é detectado e fica sempre disponível em Mais. O botão mostra o preço de 0,10 ponto. Ao tocar, você recebe diretamente um arquivo de evento .ics, sem prévia intermediária no bot, e um link alternativo do Google Agenda. Abra o arquivo no calendário e confirme a importação; o Telegram ou o sistema pode pedir que você escolha um aplicativo. A abertura automática do calendário padrão não é garantida no iOS, Android ou computador.
+A exportação para o calendário aparece no registro quando uma data ou horário é detectado e fica sempre disponível em Mais. O nome do botão não mostra o preço; a exportação custa 0,10 ponto. Ao tocar, você recebe diretamente um arquivo de evento .ics, sem prévia intermediária no bot, e um link alternativo do Google Agenda. Abra o arquivo no calendário e confirme a importação; o Telegram ou o sistema pode pedir que você escolha um aplicativo. A abertura automática do calendário padrão não é garantida no iOS, Android ou computador.
+
+Se o Telegram não confirmar o envio do ICS, o bot envia uma mensagem separada com o link preenchido do Google Agenda. A confirmação é um ID de mensagem e de arquivo retornado pelo Telegram, não o download ou a importação no dispositivo. O link não exige conectar o bot via OAuth.
 
 Somente uma data cria um evento de dia inteiro; somente um horário usa o dia de hoje no fuso salvo, mesmo se o horário já passou. Data e horário usam o momento indicado. A duração padrão é de 60 minutos. O título começa com o ícone de nota/tarefa e usa o título do registro; a descrição contém um link para o registro no bot, sem o texto privado. Se a data estiver ausente, inválida ou ambígua, Mais pede uma única data/horário de início; Voltar cancela, e anexos ou encaminhamentos criam um novo rascunho.
 
@@ -98,6 +104,8 @@ Manuais públicos do usuário:
 4. Todos os principais rótulos e botões da interface são traduzidos após a seleção.
 
 ## 2a. Pontos de IA e Telegram Stars
+A exportação para o calendário custa `0,10 ponto` pela entrega bem-sucedida do arquivo ou link alternativo, uma vez por usuário e evento sem alterações. Uma falha no ICS seguida da entrega do link Google é uma única operação. Se nenhum for entregue, a reserva é devolvida. Reexportar é grátis, inclusive após reiniciar o bot. O botão não mostra o preço.
+
 1. Ações com IA usam seu saldo de pontos.
 2. Modelo de cobrança padrão:
    - `1 ponto = 1 Telegram Star`
@@ -524,6 +532,7 @@ Ao relatar um bug, inclua:
 - Os comentários preservam a formatação do Telegram e usam `Salvar`, `❌ Excluir` e `Voltar`; voltar ou excluir também remove a tela antiga de comentários.
 - Os instantâneos de enquetes mostram os votos por opção e o total somente quando o Telegram fornece esses dados. Caso contrário, a Telenota informa claramente que os resultados são desconhecidos e nunca inventa votos zero.
 - Endereços claros são detectados em mensagens diretas e encaminhadas, inclusive com abreviações de rua em vários idiomas. Apenas o endereço candidato extraído é enviado ao OpenStreetMap, e correspondências ambíguas não são adicionadas.
+- Nos blocos de contato, `Контакты: av. Aragon nº4-bis` é extraído como `Avenida Aragon, 4-bis`. Abreviações de vias e indicadores espanhóis de número são normalizados sem perder `-bis` ou sufixos de letras. Telefones, e-mails e links próximos não entram na consulta. Uma cidade informada é mantida; o bot não inventa a cidade nem uma localização aproximada.
 
 ## Versão 0.35.0.4
 - Os títulos com IA usam o texto disponível, o resumo do link e a análise dos anexos compatíveis. Um rascunho que contém apenas um anexo mantém um título pelo tipo de mídia até ser analisado.

@@ -1,8 +1,14 @@
 # User Guide
 
+## Release 0.37.0.1
+
+Calendar buttons now respond reliably, without a price in the label. Unconfirmed ICS delivery falls back to a separate Google event link under the same 0.10-point export charge. Contacts such as `av. Aragon nº4-bis` are normalised without losing the building suffix; phone/email tails are excluded. No Google account connection is required.
+
 ## Release 0.37.0.0
 
-Calendar export is available on the item card when a date or time is detected, and always under More. The button displays the 0.10-point price. Pressing it immediately sends an .ics event file, without an intermediate bot preview, plus a Google Calendar fallback. Open the file with your calendar and confirm the import; Telegram or the operating system may ask you to choose an app. Automatic opening of the default calendar is not guaranteed on iOS, Android or desktop.
+Calendar export is available on the item card when a date or time is detected, and always under More. The button has no price in its label; calendar export costs 0.10 points. Pressing it immediately sends an .ics event file, without an intermediate bot preview, plus a Google Calendar fallback. Open the file with your calendar and confirm the import; Telegram or the operating system may ask you to choose an app. Automatic opening of the default calendar is not guaranteed on iOS, Android or desktop.
+
+If Telegram does not confirm ICS delivery, the bot sends a separate message with a pre-filled Google Calendar link. Confirmation means Telegram returned a message ID and document file ID, not that your device downloaded or imported the file. No bot OAuth connection is needed for the link.
 
 A date alone creates an all-day event; a time alone uses today in your saved time zone, even if that time has passed. A date and time use the specified moment. Timed events last 60 minutes by default. The title begins with the note/task icon and uses the item title; the description contains a link back to the item in the bot, not its private body. If the date is absent, invalid or ambiguous, More asks for one start date/time; Back cancels, and attachments/forwards start a new draft.
 
@@ -98,6 +104,8 @@ Public User Manuals:
 4. All core UI labels/buttons are translated after selection.
 
 ## 2a. AI Points and Telegram Stars
+Calendar export costs `0.10 points` for a successfully delivered file or fallback link, once per user and unchanged event. ICS failure followed by a successful Google-link fallback is one operation, not two charges. If neither is delivered, the reservation is refunded. Reissue is free, including after restart. The button label does not include the price.
+
 1. AI-powered actions use your points balance.
 2. Default billing model:
    - `1 point = 1 Telegram Star`
@@ -527,6 +535,7 @@ When reporting a bug, include:
 - Comment messages preserve Telegram formatting and use `Save`, `❌ Delete`, and `Back`; returning or deleting also removes the stale comments screen.
 - Poll snapshots show option and total vote counts only when Telegram provides them. Otherwise Telenota explicitly marks the results as unknown and never invents zero votes.
 - Clear address lines are detected in both direct and forwarded messages, including multilingual street abbreviations. Only the extracted address candidate is sent to OpenStreetMap, and ambiguous matches are not added.
+- Contact blocks such as `Контакты: av. Aragon nº4-bis` yield the address `Avenida Aragon, 4-bis`. Spanish house-number markers and street abbreviations are normalised without losing `-bis` or letter suffixes. Adjacent phone numbers, email and website links are excluded from the geocoding query. An explicitly supplied city is retained; no city or approximate location is invented.
 
 ## Release 0.35.0.4
 - AI titles use the available text, link summary, and supported attachment analysis. A draft containing only an attachment keeps a media-type title until analysis is requested.

@@ -1,8 +1,14 @@
 # Manual de usuario
 
+## Versión 0.37.0.1
+
+Los botones del calendario ya responden correctamente y no muestran el precio. Si no se confirma el envío del ICS, el bot ofrece un enlace independiente de Google Calendar dentro de la misma exportación de 0,10 puntos. Direcciones como `av. Aragon nº4-bis` conservan el número del edificio; se excluyen teléfono y correo de la consulta. No es necesario conectar una cuenta de Google.
+
 ## Versión 0.37.0.0
 
-La exportación al calendario aparece en la ficha si se detecta una fecha u hora, y siempre en Más. El botón indica el precio de 0,10 puntos. Al pulsarlo recibes directamente un archivo de evento .ics, sin vista previa intermedia en el bot, y un enlace alternativo a Google Calendar. Abre el archivo con tu calendario y confirma la importación; Telegram o el sistema pueden pedirte elegir una aplicación. No se garantiza la apertura automática del calendario predeterminado en iOS, Android ni en ordenador.
+La exportación al calendario aparece en la ficha si se detecta una fecha u hora, y siempre en Más. El botón no incluye el precio en su nombre; la exportación cuesta 0,10 puntos. Al pulsarlo recibes directamente un archivo de evento .ics, sin vista previa intermedia en el bot, y un enlace alternativo a Google Calendar. Abre el archivo con tu calendario y confirma la importación; Telegram o el sistema pueden pedirte elegir una aplicación. No se garantiza la apertura automática del calendario predeterminado en iOS, Android ni en ordenador.
+
+Si Telegram no confirma el envío del ICS, el bot envía un mensaje independiente con el enlace preparado de Google Calendar. La confirmación es un ID de mensaje y de archivo devuelto por Telegram, no la descarga o importación en el dispositivo. El enlace no requiere conectar el bot mediante OAuth.
 
 Una fecha sin hora crea un evento de día completo; una hora sin fecha usa el día de hoy en tu zona horaria guardada, aunque ya haya pasado. Con fecha y hora se usa ese momento. La duración predeterminada es de 60 minutos. El título empieza con el icono de nota/tarea y usa el título del registro; la descripción incluye un enlace al registro en el bot, no su texto privado. Si falta la fecha o es inválida o ambigua, Más solicita una sola fecha/hora de inicio; Atrás cancela, y los archivos o reenvíos crean un borrador nuevo.
 
@@ -98,6 +104,8 @@ Manuales públicos de usuario:
 4. Después de seleccionarlo, las etiquetas y botones principales de la interfaz se traducen.
 
 ## 2a. Puntos de IA y Telegram Stars
+La exportación al calendario cuesta `0,10 puntos` por entregar correctamente el archivo o el enlace alternativo, una vez por usuario y evento sin cambios. Si falla el ICS y se entrega el enlace de Google, se cobra una sola operación. Si no se entrega ninguno, se devuelve la reserva. Repetir la exportación es gratis, incluso tras reiniciar el bot. El botón no muestra el precio.
+
 1. Las acciones con IA usan tu saldo de puntos.
 2. Modelo de facturación predeterminado:
    - `1 punto = 1 Telegram Star`
@@ -526,6 +534,7 @@ Al informar de un error, incluye:
 - Los comentarios conservan el formato de Telegram y usan `Guardar`, `❌ Eliminar` y `Atrás`; al volver o eliminar también desaparece la pantalla de comentarios anterior.
 - Las capturas de encuestas muestran los votos por opción y el total solo si Telegram los proporciona. En caso contrario, Telenota indica expresamente que los resultados son desconocidos y nunca inventa ceros.
 - Las direcciones claras se detectan tanto en mensajes directos como reenviados, incluidas abreviaturas de calles en varios idiomas. Solo se envía a OpenStreetMap el candidato extraído y no se añaden coincidencias ambiguas.
+- En los bloques de contacto, `Контакты: av. Aragon nº4-bis` se extrae como `Avenida Aragon, 4-bis`. Se normalizan las abreviaturas de vía y los indicadores del número sin perder `-bis` ni las letras del edificio. Los teléfonos, correos y enlaces contiguos se excluyen de la consulta. Se conserva la ciudad indicada, sin inventar una ciudad ni una ubicación aproximada.
 
 ## Versión 0.35.0.4
 - Los títulos con IA usan el texto disponible, el resumen del enlace y el análisis de adjuntos compatibles. Un borrador que solo contiene un adjunto conserva un título por tipo de archivo hasta que se analice.

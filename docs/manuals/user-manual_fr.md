@@ -1,8 +1,14 @@
 # Manuel utilisateur
 
+## Version 0.37.0.1
+
+Les boutons du calendrier répondent désormais correctement, sans prix dans leur libellé. Si l’envoi ICS n’est pas confirmé, le bot fournit un lien Google Agenda distinct dans le cadre du même export à 0,10 point. Les adresses comme `av. Aragon nº4-bis` conservent le numéro du bâtiment ; téléphone et e-mail sont exclus de la recherche. Aucune connexion de compte Google n’est nécessaire.
+
 ## Version 0.37.0.0
 
-L’export calendrier apparaît dans la fiche si une date ou une heure est détectée, et reste toujours disponible dans Plus. Le bouton affiche le tarif de 0,10 point. Un appui envoie directement un fichier d’événement .ics, sans aperçu intermédiaire dans le bot, ainsi qu’un lien Google Agenda de secours. Ouvrez le fichier dans votre calendrier et confirmez l’importation ; Telegram ou le système peut demander de choisir une application. L’ouverture automatique du calendrier par défaut n’est garantie ni sur iOS, ni sur Android, ni sur ordinateur.
+L’export calendrier apparaît dans la fiche si une date ou une heure est détectée, et reste toujours disponible dans Plus. Le libellé du bouton ne contient pas de prix ; l’export coûte 0,10 point. Un appui envoie directement un fichier d’événement .ics, sans aperçu intermédiaire dans le bot, ainsi qu’un lien Google Agenda de secours. Ouvrez le fichier dans votre calendrier et confirmez l’importation ; Telegram ou le système peut demander de choisir une application. L’ouverture automatique du calendrier par défaut n’est garantie ni sur iOS, ni sur Android, ni sur ordinateur.
+
+Si Telegram ne confirme pas l’envoi de l’ICS, le bot envoie un message distinct avec le lien Google Agenda prérempli. La confirmation correspond à un identifiant de message et de fichier renvoyé par Telegram, pas au téléchargement ou à l’importation sur l’appareil. Le lien ne nécessite pas de connexion OAuth au bot.
 
 Une date seule crée un événement sur toute la journée ; une heure seule utilise aujourd’hui dans votre fuseau enregistré, même si l’heure est passée. Une date et une heure utilisent le moment indiqué. La durée par défaut est de 60 minutes. Le titre commence par l’icône de note/tâche et reprend le titre de la fiche ; la description contient un lien vers celle-ci dans le bot, sans son texte privé. Si la date manque, est invalide ou ambiguë, Plus demande une seule date/heure de début ; Retour annule, les fichiers et transferts créent un nouveau brouillon.
 
@@ -98,6 +104,8 @@ Manuels publics :
 4. Toutes les principales étiquettes et tous les boutons de l'interface sont traduits après la sélection.
 
 ## 2a. Points IA et Telegram Stars
+L’export calendrier coûte `0,10 point` pour l’envoi réussi du fichier ou du lien de secours, une fois par utilisateur et événement inchangé. Un échec ICS suivi du lien Google constitue une seule opération. Si aucun n’est envoyé, la réservation est remboursée. Réexporter est gratuit, même après un redémarrage. Le bouton n’affiche pas le prix.
+
 1. Les actions alimentées par l'IA utilisent votre solde de points.
 2. Modèle de facturation par défaut :
    - `1 point = 1 Telegram Star`
@@ -526,6 +534,7 @@ Lorsque vous signalez un bug, indiquez :
 - Les commentaires conservent la mise en forme Telegram et utilisent `Enregistrer`, `❌ Supprimer` et `Retour` ; revenir ou supprimer efface aussi l’ancien écran des commentaires.
 - Les instantanés de sondage affichent les votes par option et le total uniquement lorsque Telegram les fournit. Sinon, Telenota indique clairement que les résultats sont inconnus et n’invente jamais de votes à zéro.
 - Les adresses explicites sont détectées dans les messages directs et transférés, y compris avec des abréviations de rue multilingues. Seule l’adresse candidate extraite est envoyée à OpenStreetMap et les correspondances ambiguës ne sont pas ajoutées.
+- Dans un bloc de coordonnées, `Контакты: av. Aragon nº4-bis` devient l’adresse `Avenida Aragon, 4-bis`. Les abréviations de voie et les indicateurs de numéro espagnols sont normalisés sans perdre `-bis` ni les suffixes alphabétiques. Les téléphones, courriels et liens voisins sont exclus de la requête. La ville explicitement indiquée est conservée ; aucune ville ni position approximative n’est inventée.
 
 ## Version 0.35.0.4
 - Les titres IA utilisent le texte disponible, le résumé du lien et l'analyse des pièces jointes compatibles. Un brouillon ne contenant qu'une pièce jointe conserve un titre de type de média jusqu'à son analyse.
