@@ -1,5 +1,17 @@
 # Manuel utilisateur
 
+## Version 0.37.0.0
+
+L’export calendrier apparaît dans la fiche si une date ou une heure est détectée, et reste toujours disponible dans Plus. Le bouton affiche le tarif de 0,10 point. Un appui envoie directement un fichier d’événement .ics, sans aperçu intermédiaire dans le bot, ainsi qu’un lien Google Agenda de secours. Ouvrez le fichier dans votre calendrier et confirmez l’importation ; Telegram ou le système peut demander de choisir une application. L’ouverture automatique du calendrier par défaut n’est garantie ni sur iOS, ni sur Android, ni sur ordinateur.
+
+Une date seule crée un événement sur toute la journée ; une heure seule utilise aujourd’hui dans votre fuseau enregistré, même si l’heure est passée. Une date et une heure utilisent le moment indiqué. La durée par défaut est de 60 minutes. Le titre commence par l’icône de note/tâche et reprend le titre de la fiche ; la description contient un lien vers celle-ci dans le bot, sans son texte privé. Si la date manque, est invalide ou ambiguë, Plus demande une seule date/heure de début ; Retour annule, les fichiers et transferts créent un nouveau brouillon.
+
+Un seul envoi réussi du même événement est facturé par utilisateur. Le récupérer à nouveau est gratuit, même après un redémarrage du bot ; les échecs d’envoi sont remboursés. Changer le titre, la date ou l’heure produit un nouvel événement. Le bot ne confirme pas l’enregistrement dans le calendrier. Réimporter peut créer des doublons ; les modifications ultérieures ne sont pas synchronisées. Le fichier disparaît du chat à la fermeture des pièces jointes de la fiche. Aucun compte calendrier ni analyse IA payante n’est requis.
+
+La lecture audio conserve les liens de l’auteur et de la source, y compris après conversion d’une note en tâche ou inversement. Les liens sans schéma, comme Tambur.pub, s’ouvrent en HTTPS au lieu de s’afficher en Markdown.
+
+La durée de l’audio généré est mesurée et conservée à la réouverture de l’entrée. Relancer la lecture du même texte avec la même voix et le même modèle réutilise le fichier enregistré, sans nouvelle facturation de génération IA ni pièce jointe en double. Modifier le texte lu crée une nouvelle version. Les anciens fichiers audio d’origine indéterminée ne sont pas supprimés automatiquement.
+
 ## Version 0.36.0.1
 
 Les pièces jointes et messages transférés créent un nouveau brouillon au lieu d’être interprétés comme une date de rappel, même si le récapitulatif du soir attend une réponse. Une suggestion de rappel n’active pas la saisie d’une date ; ouvrez explicitement Rappel pour en saisir une.

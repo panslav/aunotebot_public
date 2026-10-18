@@ -1,5 +1,17 @@
 # Manual do usuário
 
+## Versão 0.37.0.0
+
+A exportação para o calendário aparece no registro quando uma data ou horário é detectado e fica sempre disponível em Mais. O botão mostra o preço de 0,10 ponto. Ao tocar, você recebe diretamente um arquivo de evento .ics, sem prévia intermediária no bot, e um link alternativo do Google Agenda. Abra o arquivo no calendário e confirme a importação; o Telegram ou o sistema pode pedir que você escolha um aplicativo. A abertura automática do calendário padrão não é garantida no iOS, Android ou computador.
+
+Somente uma data cria um evento de dia inteiro; somente um horário usa o dia de hoje no fuso salvo, mesmo se o horário já passou. Data e horário usam o momento indicado. A duração padrão é de 60 minutos. O título começa com o ícone de nota/tarefa e usa o título do registro; a descrição contém um link para o registro no bot, sem o texto privado. Se a data estiver ausente, inválida ou ambígua, Mais pede uma única data/horário de início; Voltar cancela, e anexos ou encaminhamentos criam um novo rascunho.
+
+Uma única entrega bem-sucedida do mesmo evento é cobrada por usuário. Obter novamente é grátis, inclusive após reiniciar o bot; falhas no envio são reembolsadas. Alterar título, data ou horário gera outro evento. O bot não confirma o salvamento no calendário. Reimportar pode duplicar eventos; alterações futuras não são sincronizadas. O arquivo some do chat ao fechar os anexos do registro. Não é necessário conectar uma conta de calendário nem usar análise de IA paga.
+
+A leitura em voz alta mantém os links do autor e da fonte, inclusive ao converter uma nota em tarefa ou vice-versa. Links sem esquema, como Tambur.pub, abrem por HTTPS em vez de aparecerem como Markdown.
+
+A duração do áudio gerado é medida e mantida ao reabrir o registro. Repetir a leitura do mesmo texto com a mesma voz e modelo reutiliza o arquivo salvo, sem nova cobrança de geração por IA nem anexo duplicado. Alterar o texto lido cria uma nova versão. Arquivos de áudio antigos de origem desconhecida não são excluídos automaticamente.
+
 ## Versão 0.36.0.1
 
 Anexos e mensagens encaminhadas criam um novo rascunho, em vez de serem interpretados como uma data de lembrete, mesmo quando o resumo da noite aguarda resposta. Uma sugestão de lembrete não ativa a digitação de datas; abra Lembrete explicitamente para digitar uma data.

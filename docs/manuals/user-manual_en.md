@@ -1,5 +1,17 @@
 # User Guide
 
+## Release 0.37.0.0
+
+Calendar export is available on the item card when a date or time is detected, and always under More. The button displays the 0.10-point price. Pressing it immediately sends an .ics event file, without an intermediate bot preview, plus a Google Calendar fallback. Open the file with your calendar and confirm the import; Telegram or the operating system may ask you to choose an app. Automatic opening of the default calendar is not guaranteed on iOS, Android or desktop.
+
+A date alone creates an all-day event; a time alone uses today in your saved time zone, even if that time has passed. A date and time use the specified moment. Timed events last 60 minutes by default. The title begins with the note/task icon and uses the item title; the description contains a link back to the item in the bot, not its private body. If the date is absent, invalid or ambiguous, More asks for one start date/time; Back cancels, and attachments/forwards start a new draft.
+
+You pay once per user for successfully delivering an unchanged event. Reopening the same export is free, including after a bot restart; delivery failures are refunded. A changed title/date/time is a new event. Creating the file does not prove it was saved in your calendar. Reimporting can create duplicates; events are not synchronised with subsequent item edits. The export is removed from the chat when the item’s displayed attachments are closed. No calendar account connection or paid AI parsing is needed.
+
+Audio playback keeps the original author and source links, including after converting between a note and a task. Domain-only links such as Tambur.pub open over HTTPS instead of appearing as raw Markdown.
+
+Generated voice has a measured duration which is retained when reopening the item. Repeating voice generation for unchanged text and the same voice/model reuses the saved rendition, without another AI generation charge or a duplicate attachment. Editing the spoken text generates a new rendition. Existing unidentified older audio files are not deleted automatically.
+
 ## Release 0.36.0.1
 
 Attachments and forwarded messages start a new capture rather than being treated as a reminder date, even while an evening digest awaits a reply. A suggested reminder does not activate date entry; open Reminder explicitly to type a date.

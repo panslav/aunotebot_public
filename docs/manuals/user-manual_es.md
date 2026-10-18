@@ -1,5 +1,17 @@
 # Manual de usuario
 
+## Versión 0.37.0.0
+
+La exportación al calendario aparece en la ficha si se detecta una fecha u hora, y siempre en Más. El botón indica el precio de 0,10 puntos. Al pulsarlo recibes directamente un archivo de evento .ics, sin vista previa intermedia en el bot, y un enlace alternativo a Google Calendar. Abre el archivo con tu calendario y confirma la importación; Telegram o el sistema pueden pedirte elegir una aplicación. No se garantiza la apertura automática del calendario predeterminado en iOS, Android ni en ordenador.
+
+Una fecha sin hora crea un evento de día completo; una hora sin fecha usa el día de hoy en tu zona horaria guardada, aunque ya haya pasado. Con fecha y hora se usa ese momento. La duración predeterminada es de 60 minutos. El título empieza con el icono de nota/tarea y usa el título del registro; la descripción incluye un enlace al registro en el bot, no su texto privado. Si falta la fecha o es inválida o ambigua, Más solicita una sola fecha/hora de inicio; Atrás cancela, y los archivos o reenvíos crean un borrador nuevo.
+
+Se cobra una sola entrega correcta por usuario para el mismo evento. Volver a obtenerlo es gratis, incluso tras reiniciar el bot; los fallos de envío se reembolsan. Un título, fecha u hora diferente crea otro evento. El bot no confirma el guardado en el calendario. Reimportar puede crear duplicados; no hay sincronización con cambios posteriores. El archivo desaparece del chat al cerrar los adjuntos del registro. No hace falta conectar una cuenta de calendario ni usar análisis de IA de pago.
+
+La lectura en voz alta conserva los enlaces del autor y de la fuente, incluso al convertir una nota en tarea o viceversa. Los enlaces sin esquema, como Tambur.pub, se abren mediante HTTPS y no se muestran como Markdown.
+
+La duración del audio generado se mide y se conserva al volver a abrir la entrada. Repetir la lectura del mismo texto con la misma voz y modelo reutiliza el archivo guardado, sin otro cargo de generación con IA ni un adjunto duplicado. Al cambiar el texto leído se crea una versión nueva. Los archivos de audio antiguos de origen desconocido no se eliminan automáticamente.
+
 ## Versión 0.36.0.1
 
 Los adjuntos y los mensajes reenviados crean un borrador nuevo en vez de interpretarse como una fecha de recordatorio, aunque el resumen de la tarde espere respuesta. Una sugerencia de recordatorio no activa la introducción de fechas; abre Recordatorio expresamente para escribir una fecha.
