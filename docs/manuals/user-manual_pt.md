@@ -1,5 +1,21 @@
 # Manual do usuário
 
+## Versão 0.37.0.3 — bônus e mensagens do sistema
+
+Um dia local ativo rende 0,50 ponto; os três dias seguintes sem atividade válida rendem 0,30, 0,15 e 0,05. No quarto dia, os bônus param com um aviso. Vale criar um registro ou comentário com mais de 100 caracteres visíveis, compartilhar ou atribuir um registro a outra pessoa; visualizar, editar e receber cópias não conta. Após um bônus de inatividade, a atividade apenas completa o total diário até 0,50. Não há créditos retroativos nem recálculo de saldos. O processamento ocorre na primeira hora local; falhas podem atrasar ou impedir o aviso nesse dia.
+
+Configurações → Ocultar mensagens do sistema: 5, 10 ou 30 segundos, 1 minuto ou Nunca; padrão de 30 segundos. Vale para novos avisos temporários, não para limpeza de navegação nem sincronização técnica do teclado. Botões de rascunhos pendentes ficam até uma ação. Google OAuth foi adiado; ICS e links Google continuam por 0,10 ponto, sem preço no botão.
+
+## Correções preparadas
+
+As confirmações de criação usam espaços comuns, sem quebras de linha forçadas. O Telegram e o sistema operacional controlam a aparência final da notificação.
+
+Na sugestão de compartilhar uma nota, Compartilhar e Abrir nota aparecem na mesma linha; Voltar fica separado e fecha apenas a sugestão. Comentários e Calendário compartilham uma linha quando o calendário está disponível.
+
+O rascunho preserva o link original antes da conclusão do resumo. Salvar um resumo alternativo mantém sua fonte. Novas cobranças de enriquecimento por IA e comprovantes de exportação guardam a referência da nota para os links do histórico; referências antigas ausentes não são adivinhadas nem reescritas.
+
+Expressões como «сегодня в 19» incluem um horário, não apenas uma data. Um link de videochamada compatível é exportado como local no ICS e no Google. A convenção regional configurável CET/CEST usa Europe/Madrid com horário de verão, não um deslocamento fixo UTC+01:00. Vários locais diferentes exigem esclarecimento.
+
 ## Versão 0.37.0.1
 
 Os botões do calendário agora respondem corretamente e não mostram o preço. Se o envio do ICS não for confirmado, o bot oferece um link separado do Google Agenda na mesma exportação de 0,10 ponto. Endereços como `av. Aragon nº4-bis` preservam o número do imóvel; telefone e e-mail ficam fora da consulta. Não é necessário conectar uma conta do Google.
@@ -110,7 +126,7 @@ A exportação para o calendário custa `0,10 ponto` pela entrega bem-sucedida d
 2. Modelo de cobrança padrão:
    - `1 ponto = 1 Telegram Star`
    - `10 pontos gratuitos` uma vez quando você começa a usar o bot
-   - `0.50 ponto gratuito` uma vez por dia local ativo, ao criar um item ou comentário com mais de 100 caracteres visíveis ou compartilhar ou atribuir um item com sucesso a outra pessoa. Dias inativos, visualizações, edições e cópias recebidas não geram esse bônus.
+   - `0,50 ponto` por dia local ativo; depois `0,30`, `0,15`, `0,05` em três dias inativos. No quarto dia, os bônus param até uma nova atividade válida. Visualizações, edições e cópias recebidas não contam.
    - nenhuma recompensa automática de pontos por criar notas/tarefas
    - `1.5 ponto / minuto` para texto em voz
    - `0.25 ponto / minuto` para análise de áudio

@@ -1,5 +1,21 @@
 # User Guide
 
+## Release 0.37.0.3 — activity bonuses and system notices
+
+An active local day earns 0.50 Points. The next three days without qualifying activity earn 0.30, 0.15 and 0.05 respectively. On day four, bonuses stop and a notification explains how to restart them. Qualifying activity is a new item/comment longer than 100 visible characters or successful sharing/assignment to another person; views, edits and incoming copies do not qualify. If an idle-day bonus was already paid, subsequent activity tops the day's total up to 0.50, not an additional 0.50. There are no catch-up credits or historical balance rewrites. Idle-day processing runs during the first local hour; outages may delay or prevent that day's notification.
+
+Settings → Hide system messages offers 5, 10 or 30 seconds, 1 minute, or Never; the default is 30 seconds. The selected delay applies to newly scheduled temporary system notices. Navigation cleanup and technical reply-keyboard synchronisation remain separate. Pending draft action buttons remain until acted upon. Google OAuth is deferred; existing ICS and Google-link exports remain available for 0.10 Points without a price on the button.
+
+## Prepared corrections
+
+Creation confirmations use ordinary spaces without forced line breaks. Telegram and the operating system control the final notification banner layout.
+
+In the mentioned-people prompt for a Note, Share and Open note appear on the same row; Back remains separate and closes only the prompt. On item cards, Comments and Calendar share a row when Calendar is available.
+
+Pending link summaries retain the original URL before processing finishes. Saving a fallback summary retains its saved source. New AI enrichment charges and calendar export receipts retain the item reference for point-history links; old unlinked charges are not guessed or rewritten.
+
+Explicit bare-hour phrases such as “сегодня в 19” include a time, not just a date. One supported meeting URL is exported as the event location in ICS and Google links. The configured regional CET/CEST convention uses Europe/Madrid, including daylight-saving time; it does not mean a fixed UTC+01:00 offset. Ambiguous multiple venues require clarification.
+
 ## Release 0.37.0.1
 
 Calendar buttons now respond reliably, without a price in the label. Unconfirmed ICS delivery falls back to a separate Google event link under the same 0.10-point export charge. Contacts such as `av. Aragon nº4-bis` are normalised without losing the building suffix; phone/email tails are excluded. No Google account connection is required.
@@ -110,7 +126,7 @@ Calendar export costs `0.10 points` for a successfully delivered file or fallbac
 2. Default billing model:
    - `1 point = 1 Telegram Star`
    - `10 free Points` once when you first start using the bot
-   - `0.50 free Points` once per active local day, credited on the first qualifying action: create an item or comment with more than 100 visible characters, or successfully share/assign an item to another user. Inactive days earn nothing; viewing, editing and receiving copies do not qualify.
+   - `0.50 free Points` per active local day; then `0.30`, `0.15`, `0.05` on the next three inactive days. Day four stops bonuses until qualifying activity resumes. Viewing, editing and receiving copies do not qualify.
    - no automatic Points reward for creating notes/tasks
    - `1.5 points / minute` for text-to-voice
    - `0.25 points / minute` for audio parsing

@@ -1,5 +1,21 @@
 # Manuel utilisateur
 
+## Version 0.37.0.3 — bonus et messages système
+
+Une journée locale active rapporte 0,50 point ; les trois jours suivants sans activité admissible, 0,30, 0,15 et 0,05. Au quatrième jour, les bonus s’arrêtent avec une notification. Créer une note ou un commentaire de plus de 100 caractères visibles, partager ou attribuer une note à une autre personne constitue une activité ; consulter, modifier ou recevoir une copie ne compte pas. Après un bonus d’inactivité, l’activité complète seulement le total journalier à 0,50. Aucun rattrapage ni recalcul historique. Le traitement intervient pendant la première heure locale ; une panne peut retarder ou empêcher la notification du jour.
+
+Paramètres → Masquer les messages système : 5, 10 ou 30 secondes, 1 minute ou Jamais ; 30 secondes par défaut. Cela concerne les nouveaux avis temporaires, pas le nettoyage de navigation ni la synchronisation technique du clavier. Les boutons des brouillons en attente restent jusqu’à une action. Google OAuth est reporté ; ICS et les liens Google restent à 0,10 point, sans prix sur le bouton.
+
+## Corrections préparées
+
+Les confirmations de création utilisent des espaces ordinaires, sans retour à la ligne forcé. Telegram et le système d’exploitation déterminent l’affichage final de la notification.
+
+Dans la proposition de partage d’une note, Partager et Ouvrir la note figurent sur la même ligne ; Retour reste séparé et ferme uniquement la proposition. Commentaires et Calendrier partagent une ligne lorsque le calendrier est disponible.
+
+Le brouillon conserve le lien d’origine avant la fin du résumé. L’enregistrement d’un résumé de secours conserve sa source. Les nouveaux débits d’enrichissement IA et reçus d’export gardent la référence de la note pour les liens de l’historique ; les anciennes références manquantes ne sont ni devinées ni réécrites.
+
+Une expression telle que «сегодня в 19» contient une heure, pas seulement une date. Un lien de visioconférence pris en charge est exporté comme lieu dans ICS et Google. La convention régionale configurable CET/CEST utilise Europe/Madrid avec l’heure d’été, et non un décalage fixe UTC+01:00. Plusieurs lieux distincts nécessitent une précision.
+
 ## Version 0.37.0.1
 
 Les boutons du calendrier répondent désormais correctement, sans prix dans leur libellé. Si l’envoi ICS n’est pas confirmé, le bot fournit un lien Google Agenda distinct dans le cadre du même export à 0,10 point. Les adresses comme `av. Aragon nº4-bis` conservent le numéro du bâtiment ; téléphone et e-mail sont exclus de la recherche. Aucune connexion de compte Google n’est nécessaire.
@@ -110,7 +126,7 @@ L’export calendrier coûte `0,10 point` pour l’envoi réussi du fichier ou d
 2. Modèle de facturation par défaut :
    - `1 point = 1 Telegram Star`
    - `10 points gratuits` une seule fois lors de votre première utilisation du bot
-   - `0.50 point gratuit` une fois par jour local actif, lors de la création d’un élément ou commentaire de plus de 100 caractères visibles, ou du partage ou de l’attribution réussis à une autre personne. Aucun bonus pour les jours inactifs, la consultation, les modifications ou les copies reçues.
+   - `0,50 point` par journée locale active ; puis `0,30`, `0,15`, `0,05` pendant trois jours inactifs. Au quatrième jour, arrêt jusqu’à une nouvelle activité admissible. Consultation, modifications et copies reçues ne comptent pas.
    - pas de récompense automatique en points pour la création de notes/tâches
    - `1.5 point / minute` pour le texte vers voix
    - `0.25 point / minute` pour l'analyse audio
