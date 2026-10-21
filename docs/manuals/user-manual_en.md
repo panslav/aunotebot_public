@@ -6,7 +6,7 @@ An active local day earns 0.50 Points. The next three days without qualifying ac
 
 Settings → Hide system messages offers 5, 10 or 30 seconds, 1 minute, or Never; the default is 30 seconds. The selected delay applies to newly scheduled temporary system notices. Navigation cleanup and technical reply-keyboard synchronisation remain separate. Pending draft action buttons remain until acted upon. Google OAuth is deferred; existing ICS and Google-link exports remain available for 0.10 Points without a price on the button.
 
-## Prepared corrections
+## Corrections in 0.37.0.3
 
 Creation confirmations use ordinary spaces without forced line breaks. Telegram and the operating system control the final notification banner layout.
 

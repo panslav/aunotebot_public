@@ -6,7 +6,7 @@ Um dia local ativo rende 0,50 ponto; os três dias seguintes sem atividade váli
 
 Configurações → Ocultar mensagens do sistema: 5, 10 ou 30 segundos, 1 minuto ou Nunca; padrão de 30 segundos. Vale para novos avisos temporários, não para limpeza de navegação nem sincronização técnica do teclado. Botões de rascunhos pendentes ficam até uma ação. Google OAuth foi adiado; ICS e links Google continuam por 0,10 ponto, sem preço no botão.
 
-## Correções preparadas
+## Correções da versão 0.37.0.3
 
 As confirmações de criação usam espaços comuns, sem quebras de linha forçadas. O Telegram e o sistema operacional controlam a aparência final da notificação.
 

@@ -6,7 +6,7 @@ Une journée locale active rapporte 0,50 point ; les trois jours suivants sans a
 
 Paramètres → Masquer les messages système : 5, 10 ou 30 secondes, 1 minute ou Jamais ; 30 secondes par défaut. Cela concerne les nouveaux avis temporaires, pas le nettoyage de navigation ni la synchronisation technique du clavier. Les boutons des brouillons en attente restent jusqu’à une action. Google OAuth est reporté ; ICS et les liens Google restent à 0,10 point, sans prix sur le bouton.
 
-## Corrections préparées
+## Corrections de la version 0.37.0.3
 
 Les confirmations de création utilisent des espaces ordinaires, sans retour à la ligne forcé. Telegram et le système d’exploitation déterminent l’affichage final de la notification.
 
