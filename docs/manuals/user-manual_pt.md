@@ -1,5 +1,15 @@
 # Manual do usuário
 
+## Versão 0.38.0.0 — lembretes e mesclagem confiáveis
+
+Datas como “28.10” são reconhecidas separadamente do resumo, com um lembrete opcional em UTC. Tarefas com data e hora futuras reconhecidas recebem um lembrete; quando há apenas a data, é usado o horário salvo do resumo diário de tarefas. Se não estiver configurado, escolha o horário. Itens antigos não são reagendados automaticamente.
+
+As sugestões de mesclagem priorizam assuntos em comum e depois a relevância do texto, excluindo itens arquivados. O ID e o título do destino são mantidos, e os textos completos são concatenados sem reescrita por IA. Anexos distintos e lembretes agendados são preservados. O original é arquivado para recuperação; os comentários originais permanecem nele.
+
+Os títulos das seções de resumo e texto extraído ficam em negrito; seções de análise idênticas são omitidas. O título da nota breve não mostra mais o limite de palavras. Sublinhados em nomes de usuário são preservados. A sugestão de compartilhamento oferece uma única ação para abrir o item, sem controles de retorno duplicados. Avisos de criação não incluem preenchimento invisível; a quebra da notificação nativa depende do dispositivo.
+
+Os valores dos bônus não mudam. As tentativas de entrega persistem sem novo crédito no saldo. O OAuth do Google continua adiado. A confirmação de envio pelo Telegram não comprova o download no dispositivo; os atrasos das imagens continuam em investigação.
+
 ## Versão 0.37.0.3 — bônus e mensagens do sistema
 
 Um dia local ativo rende 0,50 ponto; os três dias seguintes sem atividade válida rendem 0,30, 0,15 e 0,05. No quarto dia, os bônus param com um aviso. Vale criar um registro ou comentário com mais de 100 caracteres visíveis, compartilhar ou atribuir um registro a outra pessoa; visualizar, editar e receber cópias não conta. Após um bônus de inatividade, a atividade apenas completa o total diário até 0,50. Não há créditos retroativos nem recálculo de saldos. O processamento ocorre na primeira hora local; falhas podem atrasar ou impedir o aviso nesse dia.

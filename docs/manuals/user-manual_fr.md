@@ -1,5 +1,15 @@
 # Manuel utilisateur
 
+## Version 0.38.0.0 — rappels et fusion fiables
+
+Les dates comme « 28.10 » sont reconnues séparément du résumé ; un rappel facultatif est conservé en UTC. Les tâches dont la date et l’heure futures sont reconnues reçoivent un rappel. Une date seule utilise l’heure enregistrée du récapitulatif quotidien des tâches ; à défaut, choisissez une heure. Les anciens éléments ne sont pas reprogrammés automatiquement.
+
+Les suggestions de fusion privilégient les thèmes communs, puis la pertinence du texte, sans éléments archivés. L’identifiant et le titre de la destination sont conservés et les textes complets sont concaténés sans réécriture par l’IA. Les pièces jointes distinctes et les rappels programmés sont conservés. L’original est archivé pour récupération ; ses commentaires y restent.
+
+Les titres des résumés et du texte extrait sont en gras ; les sections d’analyse strictement identiques sont omises. Le titre de la note courte n’affiche plus la limite de mots. Les traits de soulignement des identifiants sont préservés. La proposition de partage présente une seule action pour ouvrir l’élément, sans commandes de retour en double. Les confirmations de création n’ajoutent plus d’espacement invisible ; l’appareil gère la mise en page des notifications natives.
+
+Les montants des bonus restent inchangés. Les nouvelles tentatives de notification persistent sans recréditer le solde. Google OAuth reste reporté. L’acceptation d’une pièce jointe par Telegram ne confirme pas son téléchargement sur l’appareil ; les lenteurs des images restent à l’étude.
+
 ## Version 0.37.0.3 — bonus et messages système
 
 Une journée locale active rapporte 0,50 point ; les trois jours suivants sans activité admissible, 0,30, 0,15 et 0,05. Au quatrième jour, les bonus s’arrêtent avec une notification. Créer une note ou un commentaire de plus de 100 caractères visibles, partager ou attribuer une note à une autre personne constitue une activité ; consulter, modifier ou recevoir une copie ne compte pas. Après un bonus d’inactivité, l’activité complète seulement le total journalier à 0,50. Aucun rattrapage ni recalcul historique. Le traitement intervient pendant la première heure locale ; une panne peut retarder ou empêcher la notification du jour.

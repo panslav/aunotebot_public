@@ -1,5 +1,15 @@
 # Manual de usuario
 
+## Versión 0.38.0.0 — recordatorios y combinación fiable
+
+Las fechas como «28.10» se reconocen por separado del resumen y se guarda un recordatorio opcional en UTC. Las tareas con una fecha y hora futuras reconocidas reciben un recordatorio; si solo hay fecha, se utiliza la hora guardada del resumen diario de tareas. Si no está configurada, elige una hora. No se reprograman registros anteriores automáticamente.
+
+Las sugerencias para combinar priorizan los temas comunes y después la relevancia del texto; excluyen registros archivados. Se conserva el ID y el título del destino y se concatena el texto completo sin reescritura por IA, conservando adjuntos distintos y recordatorios programados. El original se archiva para recuperarlo; sus comentarios permanecen allí.
+
+Los títulos de los resúmenes y del texto extraído aparecen en negrita y se omiten secciones de análisis idénticas. El título de la nota breve ya no muestra el límite de palabras. Se conservan los guiones bajos de los usuarios. La propuesta de compartir ofrece una sola acción para abrir el registro, en lugar de controles de retorno duplicados. Los avisos de creación no añaden relleno invisible; el dispositivo controla los saltos del aviso nativo.
+
+Los importes de los bonos no cambian. Los reintentos de notificación persisten sin abonar el saldo de nuevo. OAuth de Google sigue aplazado. La aceptación de un adjunto por Telegram no confirma su descarga en el dispositivo; se siguen investigando los retrasos de las imágenes.
+
 ## Versión 0.37.0.3 — bonos y mensajes del sistema
 
 Un día local activo aporta 0,50 puntos; los tres días siguientes sin actividad válida, 0,30, 0,15 y 0,05. El cuarto día se detienen con un aviso. Cuenta crear una entrada o comentario de más de 100 caracteres visibles, o compartir o asignar una entrada a otra persona; consultar, editar y recibir copias no cuenta. Si ya se abonó el bono de inactividad, la actividad solo completa el total diario hasta 0,50. No hay abonos retroactivos ni recálculo de saldos. El proceso se ejecuta durante la primera hora local; una incidencia puede retrasar o impedir el aviso ese día.

@@ -1,5 +1,15 @@
 # User Guide
 
+## Release 0.38.0.0 — reliable reminders and merging
+
+Dates such as “28.10” are recognised separately from summaries. New items retain an optional UTC reminder. Tasks with a recognised future date/time receive a scheduled reminder; a date without a time uses the saved Daily task digest time. If that setting is absent, choose a time explicitly. Historical items are not automatically rescheduled.
+
+Merge suggestions prioritise matching topics, then text relevance, and exclude archived items. Merging retains the destination ID/title and concatenates complete text without AI rewriting; distinct attachments and scheduled reminders are preserved. The original item is archived for recovery, not deleted. Its original comments remain in that archive.
+
+Generated summary/extracted-text headings are bold; exact repeated analysis sections are omitted. Brief-note headings no longer display the word limit. Underscores in usernames remain literal. The mentioned-people prompt now has one Open item action instead of duplicate Back/Return-to-item controls. Creation notices have no invisible width padding; native notification wrapping is still controlled by your device.
+
+Activity bonus amounts are unchanged. Delivery retries are durable and do not credit the balance again. Google OAuth remains deferred. Telegram accepting an attachment does not prove that it has finished downloading on your device; client-side image delays remain under investigation.
+
 ## Release 0.37.0.3 — activity bonuses and system notices
 
 An active local day earns 0.50 Points. The next three days without qualifying activity earn 0.30, 0.15 and 0.05 respectively. On day four, bonuses stop and a notification explains how to restart them. Qualifying activity is a new item/comment longer than 100 visible characters or successful sharing/assignment to another person; views, edits and incoming copies do not qualify. If an idle-day bonus was already paid, subsequent activity tops the day's total up to 0.50, not an additional 0.50. There are no catch-up credits or historical balance rewrites. Idle-day processing runs during the first local hour; outages may delay or prevent that day's notification.
