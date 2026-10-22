@@ -1,5 +1,13 @@
 # Manuel utilisateur
 
+## 0.39.0.0
+
+La recherche locale, la pagination et le retour aux résultats sont gratuits. Répondre avec l’IA demande explicitement une réponse payante, sans prix sur le bouton. Les réponses inchangées sont réutilisées dans la session.
+
+GPT-Transcribe reconnaît la parole. Une étape de mise en forme conserve les tours de dialogue seulement avec des indices explicites ; elle n’identifie pas les personnes par leur voix. Résumé, titre et métadonnées réutilisent une analyse commune.
+
+Avant une analyse vidéo en plusieurs étapes, le bot réserve le coût total. Si le résultat complet ne peut pas être fourni, la réservation est remboursée ; une vidéo sans son exploitable peut être analysée visuellement sans facturer la transcription échouée.
+
 ## Version 0.38.0.0 — rappels et fusion fiables
 
 Les dates comme « 28.10 » sont reconnues séparément du résumé ; un rappel facultatif est conservé en UTC. Les tâches dont la date et l’heure futures sont reconnues reçoivent un rappel. Une date seule utilise l’heure enregistrée du récapitulatif quotidien des tâches ; à défaut, choisissez une heure. Les anciens éléments ne sont pas reprogrammés automatiquement.
@@ -76,7 +84,7 @@ Telegram gère le téléchargement sur votre appareil ; l’aperçu peut rester 
 
 Ce guide explique comment utiliser AUNotebot depuis Telegram.
 
-Note de maintenance (clarification de la limite audio v0.25) : pour l'audio téléversé via Telegram, ce bot applique la limite de téléchargement de Telegram Bot API.
+Note de maintenance (clarification de la limite audio v1.0) : pour l'audio téléversé via Telegram, ce bot applique la limite de téléchargement de Telegram Bot API.
 
 ## 1. Démarrage
 1. Ouvrez la conversation avec le bot.
@@ -139,14 +147,14 @@ L’export calendrier coûte `0,10 point` pour l’envoi réussi du fichier ou d
    - `0,50 point` par journée locale active ; puis `0,30`, `0,15`, `0,05` pendant trois jours inactifs. Au quatrième jour, arrêt jusqu’à une nouvelle activité admissible. Consultation, modifications et copies reçues ne comptent pas.
    - pas de récompense automatique en points pour la création de notes/tâches
    - `1.5 point / minute` pour le texte vers voix
-   - `0.25 point / minute` pour l'analyse audio
-   - `1 point / minute` pour convertir en texte l'audio/vidéo déjà joint à un élément enregistré
-   - `0.1 point` par OCR d'image
-   - `0.05 point` par analyse de texte/lien
-3. Pour `🤖 Analyser avec l'IA` sur un média enregistré, le bot lit la durée stockée avec la pièce jointe Telegram et facture proportionnellement à la seconde au tarif de `1 point / minute`.
-   - Exemple : `125 secondes` coûtent `2.09 points`.
+   - `1.0 point / minute` pour l'analyse audio
+   - `1.5 point / minute` pour convertir en texte l'audio/vidéo déjà joint à un élément enregistré
+   - `0.5 point` par OCR d'image
+   - Résumé et étiquettes : `0.20 point` ; traduction : `0.50 point` ; résumé audio, analyse des images vidéo et résumé PDF : `1 point` par étape. Les titres sont gratuits ; analyse de lien : `0.05 point`.
+3. La durée est mesurée dans le fichier réel avec ffprobe avant la réservation des points, sans estimation par taille ni durée fictive.
+   - Exemple : `125 secondes` coûtent `3.13 points`.
    - Le montant est arrondi à la hausse au `0.01 point` le plus proche.
-   - Si une ancienne pièce jointe enregistrée n'a pas de durée stockée, le bot la traite comme `60 secondes`.
+   - Si la durée ne peut pas être mesurée, l’opération s’arrête sans facturation.
    - Si votre solde est insuffisant, la transcription ne démarre pas et votre note/tâche existante reste inchangée.
 4. Ouvrez `Plus -> Points` pour :
    - voir votre solde actuel
@@ -360,7 +368,7 @@ Les nouveaux brouillons reçoivent un titre concis généré par IA dans la lang
 5. Le bot calcule le coût selon le chemin d’analyse réellement utilisé :
    - l’enrichissement IA de texte/liens utilise le tarif d’analyse de texte
    - les images enregistrées utilisent le tarif d’analyse d’image
-   - l’audio/vidéo enregistré utilise la durée Telegram stockée à `1 point / minute`, arrondie au `0.01 point` supérieur
+   - La durée est mesurée dans le fichier réel avec ffprobe avant la réservation des points, sans estimation par taille ni durée fictive.
 6. Si votre solde est suffisant, le bot réserve les points requis, exécute l’analyse IA, met à jour l’élément et ne valide le débit qu’après un traitement réussi.
    - Les transcriptions audio/vidéo ajoutées incluent des horodatages à la fin de chaque paragraphe lorsque les données de timing sont disponibles.
 7. Si l’analyse IA échoue, les points réservés sont libérés et l’élément reste inchangé.

@@ -1,5 +1,13 @@
 # Manual de usuario
 
+## 0.39.0.0
+
+La búsqueda local, la paginación y volver a los resultados son gratuitos. Pulsa Responder con IA para solicitar una respuesta de pago; el botón no muestra el precio. La misma sesión reutiliza las respuestas sin cambios.
+
+GPT-Transcribe reconoce el audio. Un paso de formato textual conserva los turnos del diálogo solo cuando hay indicios explícitos; no identifica personas por la voz. El resumen, el título y los metadatos reutilizan un análisis conjunto.
+
+Antes de analizar un vídeo en varios pasos, el bot reserva el coste conjunto. Si no puede entregar el resultado completo, devuelve la reserva; un vídeo sin audio utilizable puede analizarse visualmente sin cobrar la transcripción fallida.
+
 ## Versión 0.38.0.0 — recordatorios y combinación fiable
 
 Las fechas como «28.10» se reconocen por separado del resumen y se guarda un recordatorio opcional en UTC. Las tareas con una fecha y hora futuras reconocidas reciben un recordatorio; si solo hay fecha, se utiliza la hora guardada del resumen diario de tareas. Si no está configurada, elige una hora. No se reprograman registros anteriores automáticamente.
@@ -76,7 +84,7 @@ Telegram controla la descarga en el dispositivo; la vista previa puede seguir bo
 
 Esta guía explica cómo usar AUNotebot desde Telegram.
 
-Nota de mantenimiento (aclaración del límite de audio v0.25): para el audio subido a Telegram, este bot aplica el límite de descarga de Telegram Bot API.
+Nota de mantenimiento (aclaración del límite de audio v1.0): para el audio subido a Telegram, este bot aplica el límite de descarga de Telegram Bot API.
 
 ## 1. Inicio
 1. Abre el chat con el bot.
@@ -139,14 +147,14 @@ La exportación al calendario cuesta `0,10 puntos` por entregar correctamente el
    - `0,50 puntos` por día local activo; después, `0,30`, `0,15`, `0,05` durante tres días inactivos. El cuarto día se detienen hasta reanudar la actividad válida. Consultar, editar y recibir copias no cuenta.
    - no hay recompensa automática de puntos por crear notas/tareas
    - `1.5 puntos / minuto` para texto a voz
-   - `0.25 puntos / minuto` para analizar audio
-   - `1 punto / minuto` para convertir en texto audio/vídeo ya adjunto a un elemento guardado
-   - `0.1 puntos` por OCR de imagen
-   - `0.05 puntos` por análisis de texto/enlace
-3. Para `🤖 Analizar con IA` en medios guardados, el bot lee la duración almacenada con el adjunto de Telegram y cobra proporcionalmente por segundos a `1 punto / minuto`.
-   - Ejemplo: `125 segundos` cuestan `2.09 puntos`.
+   - `1.0 puntos / minuto` para analizar audio
+   - `1.5 puntos / minuto` para convertir en texto audio/vídeo ya adjunto a un elemento guardado
+   - `0.5 puntos` por OCR de imagen
+   - Resúmenes y etiquetas: `0.20 puntos`; traducción: `0.50 puntos`; resumen de audio, análisis de fotogramas y resumen PDF: `1 punto` por paso. Los títulos son gratuitos; analizar enlaces cuesta `0.05 puntos`.
+3. La duración se mide en el archivo real mediante ffprobe antes de reservar puntos, sin estimarla por tamaño ni sustituirla por un segundo o un minuto.
+   - Ejemplo: `125 segundos` cuestan `3.13 puntos`.
    - El cargo se redondea hacia arriba al `0.01 punto` más cercano.
-   - Si un adjunto guardado antiguo no tiene duración almacenada, el bot lo trata como `60 segundos`.
+   - Si no se puede medir la duración, la operación se detiene sin cargo.
    - Si tu saldo es insuficiente, la transcripción no empieza y tu nota/tarea existente no cambia.
 4. Abre `Más -> Puntos` para:
    - ver tu saldo actual
@@ -360,7 +368,7 @@ Los borradores nuevos reciben un título breve generado por IA en el idioma de i
 5. El bot calcula el coste según la ruta real de análisis:
    - el enriquecimiento de texto/enlaces usa la tarifa de análisis de texto
    - las imágenes guardadas usan la tarifa de análisis de imagen
-   - el audio/vídeo guardado usa la duración almacenada de Telegram a `1 punto / minuto`, redondeada al `0.01 punto` más cercano
+   - La duración se mide en el archivo real mediante ffprobe antes de reservar puntos, sin estimarla por tamaño ni sustituirla por un segundo o un minuto.
 6. Si tu saldo es suficiente, el bot reserva los puntos necesarios, ejecuta el análisis con IA, actualiza el elemento y confirma el cargo solo después de un procesamiento correcto.
    - Las transcripciones de audio/vídeo añadidas incluyen marcas de tiempo al final de cada párrafo cuando hay datos de timing disponibles.
 7. Si el análisis con IA falla, los puntos reservados se liberan y el elemento queda sin cambios.

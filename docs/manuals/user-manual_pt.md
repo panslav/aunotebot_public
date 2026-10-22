@@ -1,5 +1,13 @@
 # Manual do usuário
 
+## 0.39.0.0
+
+Busca local, paginação e retorno aos resultados são gratuitos. Responder com IA solicita explicitamente uma resposta paga, sem preço no botão. Respostas inalteradas são reutilizadas na mesma sessão.
+
+GPT-Transcribe reconhece a fala. Uma etapa de formatação preserva turnos de diálogo apenas quando há evidências explícitas; não identifica pessoas pela voz. Resumo, título e metadados reutilizam uma análise conjunta.
+
+Antes de analisar um vídeo em várias etapas, o bot reserva o custo total. Se não puder entregar o resultado completo, a reserva será devolvida; um vídeo sem áudio utilizável pode ser analisado visualmente sem cobrança pela transcrição que falhou.
+
 ## Versão 0.38.0.0 — lembretes e mesclagem confiáveis
 
 Datas como “28.10” são reconhecidas separadamente do resumo, com um lembrete opcional em UTC. Tarefas com data e hora futuras reconhecidas recebem um lembrete; quando há apenas a data, é usado o horário salvo do resumo diário de tarefas. Se não estiver configurado, escolha o horário. Itens antigos não são reagendados automaticamente.
@@ -76,7 +84,7 @@ O Telegram controla o download no dispositivo; a prévia pode continuar desfocad
 
 Este guia explica como usar o AUNotebot pelo Telegram.
 
-Nota de manutenção (esclarecimento do limite de áudio v0.25): para áudio enviado pelo Telegram, este bot aplica o limite de download da Telegram Bot API.
+Nota de manutenção (esclarecimento do limite de áudio v1.0): para áudio enviado pelo Telegram, este bot aplica o limite de download da Telegram Bot API.
 
 ## 1. Início
 1. Abra o chat com o bot.
@@ -139,14 +147,14 @@ A exportação para o calendário custa `0,10 ponto` pela entrega bem-sucedida d
    - `0,50 ponto` por dia local ativo; depois `0,30`, `0,15`, `0,05` em três dias inativos. No quarto dia, os bônus param até uma nova atividade válida. Visualizações, edições e cópias recebidas não contam.
    - nenhuma recompensa automática de pontos por criar notas/tarefas
    - `1.5 ponto / minuto` para texto em voz
-   - `0.25 ponto / minuto` para análise de áudio
-   - `1 ponto / minuto` para transformar em texto áudio/vídeo já anexado a um item salvo
-   - `0.1 ponto` por OCR de imagem
-   - `0.05 ponto` por análise de texto/link
-3. Para `🤖 Analisar com IA` em mídia salva, o bot lê a duração armazenada com o anexo do Telegram e cobra proporcionalmente por segundos a `1 ponto / minuto`.
-   - Exemplo: `125 segundos` custam `2.09 pontos`.
+   - `1.0 ponto / minuto` para análise de áudio
+   - `1.5 ponto / minuto` para transformar em texto áudio/vídeo já anexado a um item salvo
+   - `0.5 ponto` por OCR de imagem
+   - Resumo e etiquetas: `0.20 ponto`; tradução: `0.50 ponto`; resumo de áudio, análise de quadros de vídeo e resumo de PDF: `1 ponto` por etapa. Títulos são gratuitos; análise de links: `0.05 ponto`.
+3. A duração é medida no arquivo real com ffprobe antes da reserva de pontos, sem estimativa por tamanho ou duração fictícia.
+   - Exemplo: `125 segundos` custam `3.13 pontos`.
    - A cobrança é arredondada para cima para o `0.01 ponto` mais próximo.
-   - Se um anexo salvo antigo não tiver duração armazenada, o bot o trata como `60 segundos`.
+   - Se não for possível medir a duração, a operação é interrompida sem cobrança.
    - Se seu saldo for insuficiente, a transcrição não começa e sua nota/tarefa existente não é alterada.
 4. Abra `Mais -> Pontos` para:
    - ver seu saldo atual
@@ -359,7 +367,7 @@ Novos rascunhos recebem um título conciso gerado por IA no idioma de interface 
 5. O bot calcula o custo de acordo com o caminho real da análise:
    - enriquecimento de texto/links com IA usa a tarifa de análise de texto
    - imagens salvas usam a tarifa de análise de imagem
-   - áudio/vídeo salvo usa a duração armazenada do Telegram a `1 ponto / minuto`, arredondada para o `0.01 ponto` mais próximo
+   - A duração é medida no arquivo real com ffprobe antes da reserva de pontos, sem estimativa por tamanho ou duração fictícia.
 6. Se seu saldo for suficiente, o bot reserva os pontos necessários, executa a análise com IA, atualiza o item e só finaliza a cobrança após um processamento bem-sucedido.
    - Transcrições de áudio/vídeo anexadas incluem timestamps ao final de cada parágrafo quando dados de tempo estão disponíveis.
 7. Se a análise com IA falhar, os pontos reservados são liberados e o item permanece inalterado.

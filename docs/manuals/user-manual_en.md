@@ -1,5 +1,13 @@
 # User Guide
 
+## 0.39.0.0
+
+Local search, pagination and returning to results are free. Use Answer with AI explicitly to generate a paid answer; the button has no price. Unchanged answers are reused within the same search session.
+
+Speech recognition uses GPT-Transcribe. A separate text-formatting step may retain dialogue turns when supported by explicit evidence; it does not identify speakers from their voices. Summaries, titles and metadata reuse a combined analysis result.
+
+Before multi-step video analysis, the bot reserves the combined cost. If the complete result cannot be delivered, the reservation is refunded; a video without usable audio can still be analysed visually without charging for failed transcription.
+
 ## Release 0.38.0.0 — reliable reminders and merging
 
 Dates such as “28.10” are recognised separately from summaries. New items retain an optional UTC reminder. Tasks with a recognised future date/time receive a scheduled reminder; a date without a time uses the saved Daily task digest time. If that setting is absent, choose a time explicitly. Historical items are not automatically rescheduled.
@@ -76,7 +84,7 @@ Telegram controls file downloading on your device; a blurred media preview can r
 
 This guide explains how to use AUNotebot from Telegram.
 
-Maintenance note (v0.25 audio limit clarification): Telegram-uploaded audio is enforced at the Telegram Bot API download limit on this bot.
+Maintenance note (v1.0 audio limit clarification): Telegram-uploaded audio is enforced at the Telegram Bot API download limit on this bot.
 
 ## 1. Start
 1. Open the bot chat.
@@ -139,14 +147,14 @@ Calendar export costs `0.10 points` for a successfully delivered file or fallbac
    - `0.50 free Points` per active local day; then `0.30`, `0.15`, `0.05` on the next three inactive days. Day four stops bonuses until qualifying activity resumes. Viewing, editing and receiving copies do not qualify.
    - no automatic Points reward for creating notes/tasks
    - `1.5 points / minute` for text-to-voice
-   - `0.25 points / minute` for audio parsing
-   - `1 point / minute` for turning audio/video already attached to a saved item into text
-   - `0.1 point` per image OCR
-   - `0.05 point` per text/link analysis
-3. For saved-media `🤖 Analyze with AI`, the bot reads the duration stored with the Telegram attachment and bills proportionally by seconds at `1 point / minute`.
-   - Example: `125 seconds` costs `2.09 points`.
+   - `1.0 points / minute` for audio parsing
+   - `1.5 points / minute` for turning audio/video already attached to a saved item into text
+   - `0.5 points` per image OCR
+   - Summaries and tags cost `0.20 points`, translation `0.50 points`; audio summaries, video-frame analysis and PDF summaries cost `1 point` per step. Titles are free; link analysis stays `0.05 points`.
+3. Media duration is measured from the actual file using ffprobe before reserving Points; there is no one-second, file-size or one-minute proxy.
+   - Example: `125 seconds` costs `3.13 points`.
    - The charge is rounded up to the nearest `0.01 point`.
-   - If an older saved attachment has no stored duration, the bot treats it as `60 seconds`.
+   - If duration cannot be measured, the operation stops without a charge.
    - If your balance is too low, transcription does not start and your existing note/task is unchanged.
 4. Open `More -> Points` to:
    - see your current balance
@@ -363,7 +371,7 @@ New drafts receive a concise AI-generated title in your selected interface langu
 5. Bot calculates the cost according to the actual analysis path:
    - text/link-style AI enrichment uses the text analysis rate
    - saved images use the image-analysis rate
-   - saved audio/video uses the stored Telegram media duration at `1 point / minute`, rounded up to the nearest `0.01 point`
+   - Media duration is measured from the actual file using ffprobe before reserving Points; there is no one-second, file-size or one-minute proxy.
 6. If your balance is sufficient, the bot reserves the required Points, runs the AI analysis, updates the item, and finalizes the charge only after successful processing.
    - Appended audio/video transcripts include timestamps at the end of each transcript paragraph when timing data is available.
 7. If AI analysis fails, the reserved Points are released and the item remains unchanged.
