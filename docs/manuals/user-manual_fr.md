@@ -1,5 +1,9 @@
 # Manuel utilisateur
 
+## 0.39.0.1
+
+L’export ICS est conservé ; le lien Google utilise le point d’entrée testé sur mobile et ordinateur. Confirmez et enregistrez l’événement dans le calendrier. La recherche locale pondère les mots-clés sans IA ni frais supplémentaires. Les listes actives excluent les tâches terminées sans supprimer les fiches conservées. Les erreurs proposent Retour et Accueil. Les résultats de liens en attente utilisent la langue d’interface actuellement enregistrée ; le titre et la description disponibles servent de solution de repli, mais les pages restreintes peuvent rester inaccessibles. Les lenteurs de chargement des photos restent à l’étude ; les photos ne sont ni converties en fichiers ni recompressées.
+
 ## 0.39.0.0
 
 La recherche locale, la pagination et le retour aux résultats sont gratuits. Répondre avec l’IA demande explicitement une réponse payante, sans prix sur le bouton. Les réponses inchangées sont réutilisées dans la session.

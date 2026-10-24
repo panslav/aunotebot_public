@@ -1,5 +1,9 @@
 # User Guide
 
+## 0.39.0.1
+
+ICS export stays available; the Google link uses the entry tested on mobile and desktop. Confirm and save the event in your calendar. Local search uses weighted keywords without AI or an extra charge. Active task lists exclude completed tasks without deleting retained records. Errors offer Back and Start. Queued link results use your current saved interface language; available page title/description metadata provides a fallback, but restricted pages may remain unavailable. Intermittent photo loading is still under investigation; photos are not converted to files or recompressed.
+
 ## 0.39.0.0
 
 Local search, pagination and returning to results are free. Use Answer with AI explicitly to generate a paid answer; the button has no price. Unchanged answers are reused within the same search session.

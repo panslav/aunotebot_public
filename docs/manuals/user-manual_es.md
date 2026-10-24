@@ -1,5 +1,9 @@
 # Manual de usuario
 
+## 0.39.0.1
+
+Se mantiene la exportación ICS; el enlace de Google utiliza la entrada probada en móvil y ordenador. Confirma y guarda el evento en el calendario. La búsqueda local pondera palabras clave sin IA ni coste adicional. Las listas de tareas activas excluyen las completadas sin borrar los registros conservados. Los errores ofrecen Volver e Inicio. Los resultados de enlaces en cola usan el idioma de interfaz guardado actualmente; el título y la descripción disponibles sirven como alternativa, aunque las páginas restringidas pueden seguir inaccesibles. Los retrasos al cargar fotos siguen en investigación; no se convierten en archivos ni se recomprimen.
+
 ## 0.39.0.0
 
 La búsqueda local, la paginación y volver a los resultados son gratuitos. Pulsa Responder con IA para solicitar una respuesta de pago; el botón no muestra el precio. La misma sesión reutiliza las respuestas sin cambios.
