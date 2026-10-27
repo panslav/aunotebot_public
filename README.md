@@ -1,4 +1,4 @@
-# aunotebot_public
+# Telenota public documentation
 
 <!-- docs-toc:start -->
 **Contents**
@@ -7,7 +7,7 @@
 - [User Manuals](#user-manuals)
 <!-- docs-toc:end -->
 
-Public legal and user-facing static docs for AUNotebot.
+Public legal and user-facing static docs.
 
 ## Terms & Conditions
 - [English](https://github.com/panslav/aunotebot_public/blob/main/docs/legal/terms-and-conditions_en.md)
