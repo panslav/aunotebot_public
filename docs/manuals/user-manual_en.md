@@ -26,7 +26,7 @@ Contents
 
 ## 1. Purpose and capabilities
 
-Telenota (AUNotebot) helps you turn Telegram messages, ideas and attachments into organised notes and tasks, then find them and act on them later. You work in the bot chat; you do not need a separate notes app.
+Telenota helps you turn Telegram messages, ideas and attachments into organised notes and tasks, then find them and act on them later. You work in the bot chat; you do not need a separate notes app.
 
 - Capture text, forwards, links, voice, video, images and supported documents.
 - Keep drafts, save notes or tasks, add comments and organise items with tags.
@@ -533,7 +533,7 @@ Open `⚙️ Settings` to configure:
 
 Error notices offer Back and Start. If a link cannot be processed, keep the error code for support and return to navigation; a restricted page may remain unavailable. Intermittent image loading remains under investigation; photos keep their original presentation and quality.
 
-`Start -> Settings` also includes a danger-zone option to delete your AUNotebot account data.
+`Start -> Settings` also includes a danger-zone option to delete your Telenota account data.
 
 Deleting all data permanently removes your bot-owned notes, tasks, drafts, reminders, contacts, settings, Points history, and linked account records.
 
@@ -587,7 +587,7 @@ Merged forwards preserve the sender for each message segment. AI analysis produc
 
 Telegram controls file downloading on your device; a blurred media preview can remain while the client downloads it. Unsupported or oversized files cannot be fully analysed.
 
-This guide explains how to use AUNotebot from Telegram.
+This guide explains how to use Telenota from Telegram.
 
 ### Latest updates (0.35.2)
 

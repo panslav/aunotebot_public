@@ -1,16 +1,37 @@
 # Terms of Use (Telenota Bot)
 
+<!-- docs-toc:start -->
+**Contents**
+
+- [1. Parties and Definitions](#1-parties-and-definitions)
+- [2. Acceptance and Eligibility](#2-acceptance-and-eligibility)
+- [3. Service Scope](#3-service-scope)
+- [4. User Content and Rights](#4-user-content-and-rights)
+- [5. Acceptable Use and Prohibited Conduct](#5-acceptable-use-and-prohibited-conduct)
+- [6. AI and Third-Party Services](#6-ai-and-third-party-services)
+- [7. Pricing, AI Points, and Telegram Stars](#7-pricing-ai-points-and-telegram-stars)
+- [8. Changes, Availability, Suspension, and Termination](#8-changes-availability-suspension-and-termination)
+- [9. Disclaimers](#9-disclaimers)
+- [10. Limitation of Liability](#10-limitation-of-liability)
+- [11. Indemnification](#11-indemnification)
+- [12. Data Protection and Privacy](#12-data-protection-and-privacy)
+- [13. Governing Law and Jurisdiction](#13-governing-law-and-jurisdiction)
+- [14. Contact and Notices](#14-contact-and-notices)
+- [15. Admin Tracking Disclosure](#15-admin-tracking-disclosure)
+- [16. Privacy information pending verification](#16-privacy-information-pending-verification)
+<!-- docs-toc:end -->
+
 ---
 
-Last updated: June 4, 2026
+Last updated: October 28, 2026
 
 ## 1. Parties and Definitions
 
-1.1. These Terms govern use of the Telenota Telegram bot, previously developed and documented as AUNotebot (the "Service").
+1.1. These Terms govern use of the Telenota Telegram bot (the "Service").
 
-1.2. The Service is operated by a private owner located in Spain (the "Owner").
+1.2. The Service is operated by Evgeny Victorov, a private individual whose postal address is 46010, Valencia, C. Avenida Aragon 13 esc. B, pta. 15, Spain, and whose contact email is e@victorov.pro (the "Owner").
 
-1.3. "User" means any person who accesses or uses the Service.
+1.3. "User" means any person who accesses or uses the Service, subject to the eligibility requirements in Section 2.
 
 1.4. "Content" includes any text, media, links, metadata, tags, reminders, summaries, transcripts, translations, generated audio, or other outputs submitted to or generated through the Service.
 
@@ -152,9 +173,9 @@ Last updated: June 4, 2026
 
 12.6. Data processing is intended to follow applicable EU and Spanish law, including Regulation (EU) 2016/679 (GDPR), where applicable. Where applicable, UK GDPR may also apply.
 
-12.7. Depending on processing context, the Owner may act as an independent controller for Service operations, while Telegram, OpenAI, payment providers, and infrastructure providers operate under their own legal terms as separate providers or processors.
+12.7. The Service uses Telegram and the OpenAI API; Hostinger provides hosting and backups. Relevant data may be transmitted to those services for the features described in these Terms. Other providers may be involved where applicable. Provider identities, data-protection roles, contractual arrangements and transfer details that have not yet been verified are marked as pending in Section 16.
 
-12.8. Where applicable by law, Users may request access, rectification, erasure, restriction, objection, and data portability through the support contact.
+12.8. Where applicable by law, Users may request access, rectification, erasure, restriction, objection, and data portability by contacting the Owner using the details in Section 1.2 or the Telegram support channel in Section 14.2.
 
 12.9. The bot may include a self-service option to delete bot-owned account data. Deletion may not remove data already held by Telegram, recipients, payment providers, backups pending rotation, logs that must be retained for security/legal reasons, or third-party providers acting under their own terms.
 
@@ -173,7 +194,7 @@ Last updated: June 4, 2026
 
 ## 14. Contact and Notices
 
-14.1. Service operator: private owner located in Spain.
+14.1. The Owner’s identity and direct contact details are set out in Section 1.2.
 
 14.2. Feedback/support (Telegram): https://t.me/telenota_chat.
 
@@ -190,3 +211,21 @@ Last updated: June 4, 2026
 15.3. Telegram Bot API polling does not expose end-user IP addresses to the Service; therefore IP-like fields may be stored as `unavailable_via_telegram_bot_api`.
 
 15.4. The Service records sharing relationship edges with fields such as `id`, `source`, `target`, `action_type` (`shr` for note sharing, `asgn` for task assignment), and may maintain operational exports or mirrors for graphing, diagnostics, and abuse prevention.
+
+## 16. Privacy information pending verification
+
+16.1. This is an interim disclosure. The following placeholders identify information that has not yet been confirmed and must be completed after verification. They do not mean that processing is absent or that legal compliance has been established.
+
+16.2. Legal bases for each processing purpose: **[PENDING OWNER VERIFICATION]**.
+
+16.3. Retention periods or criteria for Content, metadata, logs, AI inputs and outputs, temporary files, financial records and backups: **[PENDING OWNER VERIFICATION]**.
+
+16.4. Other providers and their legal identities, data-protection roles, contractual arrangements, processing locations, international transfer destinations and safeguards: **[PENDING OWNER VERIFICATION]**. Use of Telegram and the OpenAI API has been confirmed; the relevant contractual and processing details still require verification.
+
+16.5. Competent supervisory-authority information and whether a data protection officer is required or appointed, with contact details where applicable: **[PENDING OWNER VERIFICATION]**.
+
+16.6. Information about personal data obtained from other people, including sources, notice timing and any relied-upon exception; and whether profiling or automated decisions occur, with meaningful information and likely consequences where required: **[PENDING OWNER VERIFICATION]**.
+
+16.7. For questions about the pending information, contact the Owner using Section 1.2 or the confirmed Telegram support route in Section 14.2.
+
+16.8. Hostinger provides the VPS and backups. No external monitoring or analytics provider is connected; the Service keeps its own operational logs and local usage reports. There is no Google Calendar account integration. The Owner has not engaged a separate external payment provider; references to Telegram Stars concern the platform payment mechanism.
