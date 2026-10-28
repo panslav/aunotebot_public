@@ -1,16 +1,37 @@
 # Conditions d'utilisation (bot Telenota)
 
+<!-- docs-toc:start -->
+**Sommaire**
+
+- [1. Parties et définitions](#1-parties-et-définitions)
+- [2. Acceptation et éligibilité](#2-acceptation-et-éligibilité)
+- [3. Portée du Service](#3-portée-du-service)
+- [4. Contenu utilisateur et droits](#4-contenu-utilisateur-et-droits)
+- [5. Utilisation acceptable et conduite interdite](#5-utilisation-acceptable-et-conduite-interdite)
+- [6. IA et services tiers](#6-ia-et-services-tiers)
+- [7. Tarifs, Points IA et Telegram Stars](#7-tarifs-points-ia-et-telegram-stars)
+- [8. Changements, disponibilité, suspension et résiliation](#8-changements-disponibilité-suspension-et-résiliation)
+- [9. Exclusions de garantie](#9-exclusions-de-garantie)
+- [10. Limitation de responsabilité](#10-limitation-de-responsabilité)
+- [11. Indemnisation](#11-indemnisation)
+- [12. Protection des données et confidentialité](#12-protection-des-données-et-confidentialité)
+- [13. Droit applicable et juridiction](#13-droit-applicable-et-juridiction)
+- [14. Contact et notifications](#14-contact-et-notifications)
+- [15. Divulgation du suivi administratif](#15-divulgation-du-suivi-administratif)
+- [16. Informations de confidentialité en attente de vérification](#16-informations-de-confidentialité-en-attente-de-vérification)
+<!-- docs-toc:end -->
+
 ---
 
-Dernière mise à jour : 4 juin 2026
+Dernière mise à jour : 28 octobre 2026
 
 ## 1. Parties et définitions
 
-1.1. Les présentes Conditions régissent l'utilisation du bot Telegram Telenota, précédemment développé et documenté sous le nom AUNotebot (le « Service »).
+1.1. Les présentes Conditions régissent l'utilisation du bot Telegram Telenota (le « Service »).
 
-1.2. Le Service est exploité par un propriétaire privé situé en Espagne (le « Propriétaire »).
+1.2. Le Service est exploité par Evgeny Victorov, une personne physique dont l’adresse postale est 46010, Valencia, C. Avenida Aragon 13 esc. B, pta. 15, Espagne, et dont l’adresse e-mail de contact est e@victorov.pro (le « Propriétaire »).
 
-1.3. « Utilisateur » désigne toute personne qui accède au Service ou l'utilise.
+1.3. « Utilisateur » désigne toute personne qui accède au Service ou l’utilise, sous réserve des conditions d’éligibilité de la section 2.
 
 1.4. « Contenu » inclut tout texte, média, lien, métadonnée, tag, rappel, résumé, transcription, traduction, audio généré ou autre résultat soumis au Service ou généré par son intermédiaire.
 
@@ -152,9 +173,9 @@ Dernière mise à jour : 4 juin 2026
 
 12.6. Le traitement des données vise à respecter le droit applicable de l'UE et de l'Espagne, notamment le Règlement (UE) 2016/679 (RGPD), le cas échéant. Le UK GDPR peut aussi s'appliquer le cas échéant.
 
-12.7. Selon le contexte de traitement, le Propriétaire peut agir comme responsable indépendant pour les opérations du Service, tandis que Telegram, OpenAI, fournisseurs de paiement et d'infrastructure opèrent sous leurs propres conditions légales comme fournisseurs ou sous-traitants distincts.
+12.7. Le Service utilise Telegram et l’API OpenAI ; Hostinger fournit l’hébergement et les sauvegardes. Les données pertinentes peuvent être transmises à ces services pour les fonctionnalités décrites dans les présentes Conditions. D’autres prestataires peuvent intervenir le cas échéant. Les identités des prestataires, leurs rôles en matière de protection des données, les accords contractuels et les détails des transferts qui n’ont pas encore été vérifiés sont signalés comme en attente à la section 16.
 
-12.8. Lorsque la loi l'autorise, les Utilisateurs peuvent demander accès, rectification, effacement, limitation, opposition et portabilité via le contact de support.
+12.8. Lorsque la loi le permet, les Utilisateurs peuvent demander l’accès, la rectification, l’effacement, la limitation, l’opposition et la portabilité en contactant le Propriétaire aux coordonnées de la section 1.2 ou via le canal d’assistance Telegram de la section 14.2.
 
 12.9. Le bot peut inclure une option en libre-service pour supprimer les données de compte détenues par le bot. La suppression peut ne pas retirer les données déjà détenues par Telegram, des destinataires, fournisseurs de paiement, sauvegardes en attente de rotation, journaux devant être conservés pour sécurité/raisons légales ou tiers agissant selon leurs propres conditions.
 
@@ -173,7 +194,7 @@ Dernière mise à jour : 4 juin 2026
 
 ## 14. Contact et notifications
 
-14.1. Opérateur du Service : propriétaire privé situé en Espagne.
+14.1. L’identité du Propriétaire et ses coordonnées directes figurent à la section 1.2.
 
 14.2. Retours/support (Telegram) : https://t.me/telenota_chat.
 
@@ -190,3 +211,21 @@ Dernière mise à jour : 4 juin 2026
 15.3. Le polling Telegram Bot API n'expose pas les adresses IP des utilisateurs finaux au Service ; les champs de type IP peuvent donc être stockés comme `unavailable_via_telegram_bot_api`.
 
 15.4. Le Service enregistre des relations de partage avec des champs tels que `id`, `source`, `target`, `action_type` (`shr` pour partage de note, `asgn` pour assignation de tâche), et peut maintenir des exports ou miroirs opérationnels pour graphes, diagnostics et prévention des abus.
+
+## 16. Informations de confidentialité en attente de vérification
+
+16.1. Ces informations sont provisoires. Les mentions ci-dessous signalent des informations non encore confirmées, à compléter après vérification. Elles ne signifient ni l’absence de traitement ni la conformité juridique établie.
+
+16.2. Bases juridiques pour chaque finalité du traitement : **[EN ATTENTE DE VÉRIFICATION PAR LE PROPRIÉTAIRE]**.
+
+16.3. Durées ou critères de conservation du Contenu, des métadonnées, des journaux, des entrées et sorties d’IA, des fichiers temporaires, des données financières et des sauvegardes : **[EN ATTENTE DE VÉRIFICATION PAR LE PROPRIÉTAIRE]**.
+
+16.4. Autres prestataires et leurs dénominations légales, rôles en matière de protection des données, accords contractuels, lieux de traitement, destinations des transferts internationaux et garanties : **[EN ATTENTE DE VÉRIFICATION PAR LE PROPRIÉTAIRE]**. L’utilisation de Telegram et de l’API OpenAI est confirmée ; les accords contractuels et les détails des traitements correspondants restent à vérifier.
+
+16.5. Informations sur l’autorité de contrôle compétente et sur l’obligation ou la désignation d’un délégué à la protection des données, avec ses coordonnées le cas échéant : **[EN ATTENTE DE VÉRIFICATION PAR LE PROPRIÉTAIRE]**.
+
+16.6. Informations sur les données personnelles obtenues auprès d’autres personnes, notamment les sources, les délais d’information et les exceptions invoquées ; et sur l’existence d’un profilage ou de décisions automatisées, avec des informations utiles et les conséquences prévues lorsque cela est requis : **[EN ATTENTE DE VÉRIFICATION PAR LE PROPRIÉTAIRE]**.
+
+16.7. Pour toute question sur les informations en attente, contactez le Propriétaire aux coordonnées de la section 1.2 ou par le canal d’assistance Telegram confirmé de la section 14.2.
+
+16.8. Hostinger fournit le VPS et les sauvegardes. Aucun prestataire externe de surveillance ou d’analyse n’est connecté ; le Service conserve ses propres journaux opérationnels et rapports locaux d’utilisation. Il n’existe aucune intégration avec un compte Google Calendar. Le Propriétaire n’a pas engagé de prestataire de paiement externe distinct ; les références à Telegram Stars concernent le mécanisme de paiement de la plateforme.
