@@ -29,7 +29,7 @@
 
 1.1. Estas Condiciones regulan el uso del bot de Telegram Telenota (el "Servicio").
 
-1.2. El Servicio es operado por Evgeny Victorov, persona física con domicilio postal en 46010, Valencia, C. Avenida Aragon 13 esc. B, pta. 15, España, y correo electrónico de contacto e@victorov.pro (el "Propietario").
+1.2. El Servicio es operado por Evgeny Victorov, persona física con domicilio postal en 46002, Spain, Comunidad Valenciana, Valencia, Pl. de Ayuntamento, 1, y correo electrónico de contacto e@victorov.pro (el "Propietario").
 
 1.3. "Usuario" significa cualquier persona que acceda al Servicio o lo use, con sujeción a los requisitos de elegibilidad de la Sección 2.
 

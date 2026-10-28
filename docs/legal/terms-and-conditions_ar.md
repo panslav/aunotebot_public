@@ -29,7 +29,7 @@
 
 1.1. تحكم هذه الشروط استخدام بوت Telegram المسمى Telenota (ويشار إليه باسم «الخدمة»).
 
-1.2. يدير الخدمة Evgeny Victorov، وهو شخص طبيعي، وعنوانه البريدي: 46010, Valencia, C. Avenida Aragon 13 esc. B, pta. 15, Spain؛ وبريده الإلكتروني للتواصل: e@victorov.pro («المالك»).
+1.2. يدير الخدمة Evgeny Victorov، وهو شخص طبيعي، وعنوانه البريدي: 46002, Spain, Comunidad Valenciana, Valencia, Pl. de Ayuntamento, 1؛ وبريده الإلكتروني للتواصل: e@victorov.pro («المالك»).
 
 1.3. «المستخدم» يعني أي شخص يصل إلى الخدمة أو يستخدمها، وفقًا لمتطلبات الأهلية في القسم 2.
 

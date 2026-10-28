@@ -29,7 +29,7 @@ Last updated: October 28, 2026
 
 1.1. These Terms govern use of the Telenota Telegram bot (the "Service").
 
-1.2. The Service is operated by Evgeny Victorov, a private individual whose postal address is 46010, Valencia, C. Avenida Aragon 13 esc. B, pta. 15, Spain, and whose contact email is e@victorov.pro (the "Owner").
+1.2. The Service is operated by Evgeny Victorov, a private individual whose postal address is 46002, Spain, Comunidad Valenciana, Valencia, Pl. de Ayuntamento, 1, and whose contact email is e@victorov.pro (the "Owner").
 
 1.3. "User" means any person who accesses or uses the Service, subject to the eligibility requirements in Section 2.
 

@@ -29,7 +29,7 @@
 
 1.1. 本条款适用于 Telegram 机器人 Telenota 的使用（下称“服务”）。
 
-1.2. 服务由自然人 Evgeny Victorov 运营，邮寄地址为：46010, Valencia, C. Avenida Aragon 13 esc. B, pta. 15, Spain；联系邮箱：e@victorov.pro（下称“所有者”）。
+1.2. 服务由自然人 Evgeny Victorov 运营，邮寄地址为：46002, Spain, Comunidad Valenciana, Valencia, Pl. de Ayuntamento, 1；联系邮箱：e@victorov.pro（下称“所有者”）。
 
 1.3. “用户”指访问或使用本服务并符合第 2 节资格要求的任何个人。
 
